@@ -1,6 +1,19 @@
 # 주제: PubMed을 이용한 환경성 질환의 biomarker 탐색
 본 과제에서 NCBI 산하의 데이터베이스인 PubMed의 논문을 이용하여 환경성 질환에 대한 biomarker가 무엇이 있는지 알아보았다.
 
+## 목차
+[1. 목적]
+
+[2. 과정에 대한 Flowchart ]
+
+[3. Progress]
+
+[3.1 ICD의 질병을 분류]
+
+[3.2 PubMed에서 질병별 Title, Abstract, DOI 추출]
+
+[3.3 NCBI에 있는 human gene database로 부터 각 논문별 등장하는 gene 파악]
+
 ## 1. 목적
 본 연구의 목적은 환경성 질환의 genetic biomarker를 찾고, 데이터베이스를 구축하는 것이다.
 
