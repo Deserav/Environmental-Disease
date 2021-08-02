@@ -1,0 +1,23 @@
+# 주제: PubMed을 이용한 환경성 질환의 biomarker 탐색
+본 과제에서 NCBI 산하의 데이터베이스인 PubMed의 논문을 이용하여 환경성 질환에 대한 biomarker가 무엇이 있는지 알아보았다.
+
+## 목적
+본 연구의 목적은 환경성 질환의 genetic biomarker를 찾고, 데이터베이스를 구축하는 것이다.
+
+환경성 질환은 환경보건법 제2조 제 2호[1]에 따라 환경유해인자와 상관성이 있다고 인정되는 질환 중 감염질환이 아닌 것을 이야기한다. 본 보고서에는 6가지 환경성질환군 중에서 RFP에서 요구한
+- 알레르기 질환
+- 신경계질환
+- 호흡계질환
+
+위 3가지에 대해서 연구를 진행하였다.
+
+현재 선행연구 중에서 genetic biomarker과 disease가 키워드로 포함된 논문을 PubMed에서 찾아, 등장하는 gene과 disease 이름을 파악하여 관련성이 높은 것을 찾는 것이 목표이다.
+
+## 과정에 대한 Flowchart
+
+## Progress
+
+### ICD의 질병을 분류
+ICD(International Statistical Classification of Diseases and Related Health Problems) [2] 는 세계보건기구에서 만든, 질병과 증후군에 대한 국제 표준이다. 본 연구에서 사용한 ICD-11는 ICD의 11번째 개정안으로, 2019년 5월에 채택되었고, 2022년 1월 1일부터 효력을 가진다. 
+
+ICD-11에서 제시한 알레르기 질환, 신경계 질환, 호흡계 질환에 어떤 것이 있는지 살펴보고, 각 질병을 PubMed에서 검색했을 때, 
