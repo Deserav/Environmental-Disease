@@ -59,7 +59,7 @@ Python의 Biopython 모듈로부터 Entrez와 Medline 모듈을 사용하여, �
  
 이런 식으로 Python을 이용하여 알레르기 질환 149개, 신경계 질환 652개, 호흡계 질환 215개에 txt 파일을 만들어, 논문의 Title, Abstract, DOI를 저장하였다.
 
-hu
+
 ### 3.3 NCBI에 있는 human gene database로 부터 각 논문별 등장하는 gene 파악
 온라인 오픈 소스 biomarker 데이터베이스가 있기는 하지만, 등장하는 질병의 수와 gene의 수가 매우 한정적이었다. 때문에 우리는 human gene을 전수조사 하는 과정의 필요성을 느꼈다.
 
