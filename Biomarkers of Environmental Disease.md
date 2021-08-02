@@ -6,7 +6,7 @@
 
 [2. 과정에 대한 Flowchart ](https://github.com/Deserav/Environmental-Disease/blob/main/Biomarkers%20of%20Environmental%20Disease.md#2-%EA%B3%BC%EC%A0%95%EC%97%90-%EB%8C%80%ED%95%9C-flowchart)
 
-[3. Progress](https://github.com/Deserav/Environmental-Disease/blob/main/Biomarkers%20of%20Environmental%20Disease.md#31-icd%EC%9D%98-%EC%A7%88%EB%B3%91%EC%9D%84-%EB%B6%84%EB%A5%98)
+[3. Progress](https://github.com/Deserav/Environmental-Disease/blob/main/Biomarkers%20of%20Environmental%20Disease.md#3-progress)
 
 [3.1 ICD의 질병을 분류](https://github.com/Deserav/Environmental-Disease/blob/main/Biomarkers%20of%20Environmental%20Disease.md#32-pubmed%EC%97%90%EC%84%9C-%EC%A7%88%EB%B3%91%EB%B3%84-title-abstract-doi-%EC%B6%94%EC%B6%9C)
 
