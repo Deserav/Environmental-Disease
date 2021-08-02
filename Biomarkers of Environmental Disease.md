@@ -49,7 +49,15 @@ ICD(International Statistical Classification of Diseases and Related Health Prob
 
 [respDB_shredded_list.txt](https://github.com/Deserav/Environmental-Disease/files/6914678/respDB_shredded_list.txt)
 
-이로써 ICD-11에 분류되어 있는 알레르기 질환, 신경계 질환, 호흡계 질환 중에 PubMed 데이터베이스에 존재하는 질병의 목록을 확보하게 되었다.
+반면, 개별 질병에 대한 논문의 수를 다음과 같이 정리하였다.
+
+[allr_DB.xlsx](https://github.com/Deserav/Environmental-Disease/files/6915474/allr_DB.xlsx)
+
+[nerv_DB.xlsx](https://github.com/Deserav/Environmental-Disease/files/6915475/nerv_DB.xlsx)
+
+[resp_DB.xlsx](https://github.com/Deserav/Environmental-Disease/files/6915473/resp_DB.xlsx)
+
+이로써 ICD-11에 분류되어 있는 알레르기 질환, 신경계 질환, 호흡계 질환 중에 PubMed 데이터베이스에 존재하는 질병의 목록, 논문의 수를 확보하게 되었다.
 
 ### 3.2 PubMed에서 질병별 Title, Abstract, DOI 추출
 Python의 Biopython 모듈로부터 Entrez와 Medline 모듈을 사용하여, 검색 키워드로부터 등장하는 논문들의 Title, Abstract, DOI를 전부 하나의 txt 파일로 정리하였다. 3.1의 각 txt 파일에 등장한 질병들을 모듈의 input으로 하여 다음의 과정을 진행하였다.
@@ -69,12 +77,15 @@ NCBI에 등장하는 63,816개의 (pseudogene, tRNA gene 등을 포함) gene의 
 
 [nervDB_count.txt](https://github.com/Deserav/Environmental-Disease/files/6914687/nervDB_count.txt)
 
+"respDB 파일명"
+
 마지막으로 질환군별로 등장하는 gene과 alias를 파악하고, 개수를 확인하였다. 
 
 [allrDB_gene_set.txt](https://github.com/Deserav/Environmental-Disease/files/6915328/allrDB_gene_set.txt)
 
 [nervDB_gene_set.txt](https://github.com/Deserav/Environmental-Disease/files/6915327/nervDB_gene_set.txt)
 
+"respDB 파일명"
 
 그 결과, 질환군별로 나타나는 gene + alias 의 개수는 알레르기 질환군 5,215개, 신경계 질환군 12,739개, 호흡계 질환군 x개였다.
 
