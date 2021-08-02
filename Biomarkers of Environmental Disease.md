@@ -29,8 +29,11 @@ ICD(International Statistical Classification of Diseases and Related Health Prob
 |논문의 수|38,458|383,659|180,255|
 
 여기서 사용한 질병명에 대한 파일을 첨부하였다.
+
 [allrDB_shredded_list.txt](https://github.com/Deserav/Environmental-Disease/files/6914676/allrDB_shredded_list.txt)
+
 [nervDB_shredded_list.txt](https://github.com/Deserav/Environmental-Disease/files/6914677/nervDB_shredded_list.txt)
+
 [respDB_shredded_list.txt](https://github.com/Deserav/Environmental-Disease/files/6914678/respDB_shredded_list.txt)
 
 ### 3.2 PubMed에서 질병별 Title, Abstract, DOI 추출
@@ -41,10 +44,13 @@ ICD-11에서 찾은 개별적인 질명에 biomarker라는 키워드와 결합�
 [allrDB_final.zip](https://github.com/Deserav/Environmental-Disease/files/6914688/allrDB_final.zip)
 
 
+
+
 ### 3.3 NCBI에 있는 human gene database로 부터 각 논문별 등장하는 gene 파악
 NCBI에 등장하는 63,816개의 (pseudogene, tRNA gene 등을 포함) gene의 symbol과 alias를 전부 추출하여, 질병 txt 파일의 Abstract와 비교하였다. 이렇게 등장하는 gene의 종류, 빈도를 파악하였다. 결과물에 대한 파일을 다음과 같이 첨부하였다.
 
 [allrDB_count.txt](https://github.com/Deserav/Environmental-Disease/files/6914686/allrDB_count.txt)
+
 [nervDB_count.txt](https://github.com/Deserav/Environmental-Disease/files/6914687/nervDB_count.txt)
 
 
