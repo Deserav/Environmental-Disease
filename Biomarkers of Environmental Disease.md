@@ -11,7 +11,7 @@
 
 위 3가지에 대해서 연구를 진행하였다.
 
-현재 선행연구 중에서 genetic biomarker과 disease가 키워드로 포함된 논문을 PubMed에서 찾아, 등장하는 gene과 disease 이름을 파악하여 관련성이 높은 것을 찾는 것이 목표이다.
+현재까지 선행연구 중에서 genetic biomarker과 disease가 키워드로 포함된 논문을 PubMed에서 찾아, 등장하는 gene과 disease 이름을 파악하여 관련성이 높은 것을 찾는 것이 목표이다.
 
 ## 2. 과정에 대한 Flowchart
 
@@ -20,7 +20,7 @@
 ### 3.1 ICD의 질병을 분류
 ICD(International Statistical Classification of Diseases and Related Health Problems) [2] 는 세계보건기구에서 만든, 질병과 증후군에 대한 국제 표준이다. 본 연구에서 사용한 ICD-11는 ICD의 11번째 개정안으로, 2019년 5월에 채택되었고, 2022년 1월 1일부터 효력을 가진다. 
 
-알레르기 질환군, 신경계 질환군, 호흡계 질환군에서 ICD-11에서 질환들이 명시되어 있는지 파악하였다. 그리고 각 질병이 biomarker가 있는지 알아보기 위해, PubMed에서 (질병명[Title/Abstract]) AND (biomarker[Title/Abstract])의 키워드로 검색했을 때 등장하는 논문의 수를 알아보았다. 그 결과는 다음과 같다.
+ICD-11에서 알레르기 질환군, 신경계 질환군, 호흡계 질환군에 어떤 질환들이 포함되어 있는지 파악하였다. 그리고 각 질병이 biomarker가 있는지 알아보기 위해, PubMed에서 (질병명[Title/Abstract]) AND (biomarker[Title/Abstract])를 키워드로 검색했을 때 등장하는 논문의 수를 알아보았다. 그 결과는 다음과 같다.
 
 |         |알레르기 질환군| 신경계 질환군| 호흡계 질환군|
 |---------|-------------|------------|-----------|
@@ -28,7 +28,7 @@ ICD(International Statistical Classification of Diseases and Related Health Prob
 |논문이 존재하는 질환의 개수|**149**|**652**|**215**|
 |논문의 수|38,458|383,659|180,255|
 
-여기서 사용한 질병명에 대한 파일을 첨부하였다.
+이 결과에서 논문이 존재하는 질환만을 따로 txt 파일로 정리하였고, 아래에 첨부하였다.
 
 [allrDB_shredded_list.txt](https://github.com/Deserav/Environmental-Disease/files/6914676/allrDB_shredded_list.txt)
 
@@ -40,10 +40,6 @@ ICD(International Statistical Classification of Diseases and Related Health Prob
 Python의 Biopython 모듈로부터 Entrez와 Medline 모듈을 사용하여, 검색 키워드로부터 등장하는 논문들의 Title, Abstract, DOI를 전부 하나의 txt 파일로 정리하였다. 
 
 ICD-11에서 찾은 개별적인 질명에 biomarker라는 키워드와 결합하여 (질병명[Title/Abstract]) AND (biomarker[Title/Abstract])로 검색하였다. 각 질병별 검색 결과로 나타나는 논문들의 Title, Abstract, DOI를 txt 파일로 정리하였다. 이런 식으로 알레르기 질환 149개, 신경계 질환 652개, 호흡계 질환 215개의 txt 파일을 만들었다.
-
-[allrDB_final.zip](https://github.com/Deserav/Environmental-Disease/files/6914688/allrDB_final.zip)
-
-
 
 
 ### 3.3 NCBI에 있는 human gene database로 부터 각 논문별 등장하는 gene 파악
