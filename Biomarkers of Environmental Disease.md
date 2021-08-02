@@ -77,7 +77,8 @@ NCBI에 등장하는 63,816개의 (pseudogene, tRNA gene 등을 포함) gene의 
 
 [nervDB_count.txt](https://github.com/Deserav/Environmental-Disease/files/6914687/nervDB_count.txt)
 
-"respDB 파일명"
+[respDB_count.txt](https://github.com/Deserav/Environmental-Disease/files/6916625/respDB_count.txt)
+
 
 마지막으로 질환군별로 등장하는 gene과 alias를 파악하고, 개수를 확인하였다. 
 
@@ -85,8 +86,8 @@ NCBI에 등장하는 63,816개의 (pseudogene, tRNA gene 등을 포함) gene의 
 
 [nervDB_gene_set.txt](https://github.com/Deserav/Environmental-Disease/files/6915327/nervDB_gene_set.txt)
 
-"respDB 파일명"
+[respDB_gene_set.txt](https://github.com/Deserav/Environmental-Disease/files/6916632/respDB_gene_set.txt)
 
-그 결과, 질환군별로 나타나는 gene + alias 의 개수는 알레르기 질환군 5,215개, 신경계 질환군 12,739개, 호흡계 질환군 x개였다.
+그 결과, 질환군별로 나타나는 gene + alias 의 개수는 알레르기 질환군 5,215개, 신경계 질환군 12,739개, 호흡계 질환군 8,511 개였다.
 
 
