@@ -39,7 +39,7 @@
 ### 3.1 ICD의 질병을 분류
 ICD(International Statistical Classification of Diseases and Related Health Problems) [2] 는 세계보건기구(WHO)에서 만든, 질병과 증후군에 대한 국제 표준이다. 본 연구에서 사용한 ICD-11는 ICD의 11번째 개정안으로, 2019년 5월에 채택되었고, 2022년 1월 1일부터 효력을 가진다. 
 
-우리는 ICD-11에서 알레르기 질환군, 신경계 질환군, 호흡계 질환군에 어떤 질환들이 포함되어 있는지 파악하였다. 그리고 각 질병마다 biomarker가 있는지 알아보기 위해, PubMed에서 **(질병명[Title/Abstract]) AND (biomarker[Title/Abstract])** 를 키워드로 검색했을 때 등장하는 논문의 수를 알아보았다. 그 결과는 다음과 같다.
+우선 ICD-11에서 알레르기 질환군, 신경계 질환군, 호흡계 질환군에 어떤 질환들이 포함되어 있는지 파악하였다. 그리고 각 질병마다 biomarker가 있는지 알아보기 위해, PubMed에서 **(질병명[Title/Abstract]) AND (biomarker[Title/Abstract])** 를 키워드로 검색했을 때 등장하는 논문의 수를 알아보았다. 그 결과는 다음과 같다.
 
 |         |알레르기 질환군| 신경계 질환군| 호흡계 질환군|
 |---------|-------------|------------|-----------|
@@ -68,7 +68,7 @@ ICD(International Statistical Classification of Diseases and Related Health Prob
 이로써 ICD-11에 분류되어 있는 알레르기 질환, 신경계 질환, 호흡계 질환 중에 PubMed 데이터베이스에 존재하는 질병의 목록, 논문의 수를 확보하게 되었다.
 
 ### 3.2 PubMed에서 질병별 Title, Abstract, DOI 추출
-Python의 Biopython 모듈로부터 Entrez와 Medline 모듈을 사용하여, 검색 키워드로부터 등장하는 논문들의 Title, Abstract, DOI를 전부 하나의 txt 파일로 정리하였다. 3.1의 각 txt 파일에 등장한 질병들을 모듈의 input으로 하여 다음의 과정을 진행하였다.
+Python의 Biopython 모듈로부터 Entrez와 Medline 모듈을 사용하여, 검색 키워드로부터 등장하는 논문들의 Title, Abstract, DOI를 전부 하나의 txt 파일로 정리하였다. 3.1 단계에 첨부한 각각의 txt 파일에 등장한 질병들을 모듈의 input으로 하여 다음의 과정을 진행하였다.
 
 - ICD-11에서 찾은 개별적인 질명에 biomarker라는 키워드와 결합하여 **(질병명[Title/Abstract]) AND (biomarker[Title/Abstract])** 로 검색하였다. 
 - 각 질병마다 검색 결과로 나타나는 논문들의 Title, Abstract, DOI를 txt 파일로 정리하였다. 
