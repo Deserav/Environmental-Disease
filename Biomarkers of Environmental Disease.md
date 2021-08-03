@@ -120,5 +120,6 @@ NCBI에서 제공한 raw data에 대한 파일은 다음과 같다.
   - IDBD: 감염성 질환에 대한 biomarker가 나와있다. 환경성 질환은 비감염성을 전제로 하고 있기 때문에 부적합
   - GOBIOM: 라이선스 필요
   - ResMarkerDB: Immunoglobulin biomarker를 주로 하고, cancer에 대한 데이터가 주력
+
 나머지 데이터베이스에 대해서 좀 더 조사가 필요하다.
 - Biomarker와 disease의 상관성을 입증할 방법 필요: 어떠한 통계적인 방법으로 상관성을 입증할 수 있는지 피드백이 필요하다.
