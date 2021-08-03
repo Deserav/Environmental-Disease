@@ -88,6 +88,6 @@ NCBI에 등장하는 63,816개의 (pseudogene, tRNA gene 등을 포함) gene의 
 
 [respDB_gene_set.txt](https://github.com/Deserav/Environmental-Disease/files/6916632/respDB_gene_set.txt)
 
-그 결과, 질환군별로 나타나는 gene + alias 의 개수는 알레르기 질환군 5,215개, 신경계 질환군 12,739개, 호흡계 질환군 8,511 개였다.
+그 결과, 질환군별로 나타나는 gene + alias 의 개수는 알레르기 질환군 5,215개, 신경계 질환군 12,739개, 호흡계 질환군 8,515 개였다.
 
 
