@@ -77,7 +77,7 @@ Python의 Biopython 모듈로부터 Entrez와 Medline 모듈을 사용하여, �
 
 
 ### 3.3 NCBI에 있는 human gene database로부터 총 gene의 개수 파악
-온라인 오픈 소스 biomarker 데이터베이스가 있기는 하지만, 등장하는 질병의 수와 gene의 수가 매우 한정적이었다. 그래서 human gene을 전수조사 하는 과정을 진행하였다. 
+온라인 [오픈 소스 biomarker 데이터베이스](https://markerdb.ca/) 가 있기는 하지만, 등장하는 질병의 수와 gene의 수가 매우 한정적이었다. 그래서 human gene을 전수조사 하는 과정을 진행하였다. 
 
 NCBI에서 제공한 raw data에 대한 파일은 다음과 같다.
 
