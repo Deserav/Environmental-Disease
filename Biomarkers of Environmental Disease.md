@@ -117,8 +117,8 @@ NCBI에서 제공한 raw data에 대한 파일은 다음과 같다
 최종적으로 genetic biomarker에 대한 데이터베이스를 마련하기 위해 해결해야 할 문제들은 다음과 같다.
 - 질병명의 약자와 gene symbol이 같은 경우: 예를 들어 CAP라는 문자열은 BRD4 gene의 alias 중 하나이지만, community acquired pneumonia의 약자이기도 하다. 문자열로 비교할 때, 우리가 찾은 문자열이 논문 내에서 gene으로 쓰이건지, 다른 의미로 쓰인 건지 파악하기 어렵다.
 - 알려진 genetic biomarker에 대한 데이터 부족: 많은 biomarker 데이터베이스는 protein, metabolite을 기준으로 하고 있다. Genetic biomarker이 나와있는 데이터베이스가 필요하다. RFP에서 사용할 데이터베이스로 ENCODE, IHEC, SRA, GEO, Charles River Biomarker DB, ResMarkerDB, GOBIOM, IDBD를 제시했지만, 다음과 같은 이유로 부적합하다고 판단했다.
- - IDBD: 감염성 질환에 대한 biomarker가 나와있다. 환경성 질환은 비감염성을 전제로 하고 있기 때문에 부적합
- - GOBIOM: 라이선스 필요
- - ResMarkerDB: Immunoglobulin biomarker를 주로 하고, cancer에 대한 데이터가 주력
+  - IDBD: 감염성 질환에 대한 biomarker가 나와있다. 환경성 질환은 비감염성을 전제로 하고 있기 때문에 부적합
+  - GOBIOM: 라이선스 필요
+  - ResMarkerDB: Immunoglobulin biomarker를 주로 하고, cancer에 대한 데이터가 주력
 나머지 데이터베이스에 대해서 좀 더 조사가 필요하다.
 - Biomarker와 disease의 상관성을 입증할 방법 필요: 어떠한 통계적인 방법으로 상관성을 입증할 수 있는지 피드백이 필요하다.
