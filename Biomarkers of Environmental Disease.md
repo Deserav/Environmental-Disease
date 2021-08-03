@@ -31,6 +31,8 @@
 현재까지 선행연구 중에서 genetic biomarker과 disease가 키워드로 포함된 논문을 PubMed에서 찾아, 등장하는 gene과 disease 이름을 파악하여 상관성이 높은 것을 찾는 것이 목표이다.
 
 ## 2. 과정에 대한 Flowchart
+![프레젠테이션1 (1)](https://user-images.githubusercontent.com/88135502/127962840-e6dca16f-cb88-4828-ac83-bca73fa456bb.jpg)
+
 
 ## 3. Progress
 
