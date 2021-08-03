@@ -14,7 +14,7 @@
 
 [3.3 NCBI에 있는 human gene database로부터 총 gene의 개수 파악](https://github.com/Deserav/Environmental-Disease/blob/main/Biomarkers%20of%20Environmental%20Disease.md#33-ncbi%EC%97%90-%EC%9E%88%EB%8A%94-human-gene-database%EB%A1%9C-%EB%B6%80%ED%84%B0-%EA%B0%81-%EB%85%BC%EB%AC%B8%EB%B3%84-%EB%93%B1%EC%9E%A5%ED%95%98%EB%8A%94-gene-%ED%8C%8C%EC%95%85)
 
-[]
+[3.4 Gene의 symbol과 alias를 PubMed 논문에서 찾기](https://github.com/Deserav/Environmental-Disease/blob/main/Biomarkers%20of%20Environmental%20Disease.md#34-gene%EC%9D%98-symbol%EA%B3%BC-alias%EB%A5%BC-pubmed-%EB%85%BC%EB%AC%B8%EC%97%90%EC%84%9C)
 
 ## 1. 목적
 본 연구의 목적은 환경성 질환군의 genetic biomarker를 찾고, 데이터베이스를 구축하는 것이다.
@@ -90,8 +90,8 @@ NCBI에서 제공한 raw data에 대한 파일은 다음과 같다
 
 최종적으로 127,985 - ( 18 + 49 ) = 127,918의 문자열을 가지고 다음 단계를 진행하였다.
 
-### 3.4 Gene의 symbol과 alias를 PubMed 논문에서 
-전 단계에서 선정한 127,918개의 문자열과 602,372 논문의 Abstract와 비교하였다. 이렇게 논문마다 등장하는 gene의 종류, 빈도를 계산하였다. 결과물에 대한 파일을 다음과 같다.
+### 3.4 Gene의 symbol과 alias를 PubMed 논문에서 찾기
+전 단계에서 선정한 127,918개의 문자열과 602,372 논문의 Abstract와 비교하였다. 이렇게 문자열 비교를 통해 논문마다 등장하는 gene의 종류, 빈도를 계산하였다. 결과물에 대한 파일을 다음과 같다.
 
 [allrDB_count.txt](https://github.com/Deserav/Environmental-Disease/files/6914686/allrDB_count.txt)
 
@@ -111,3 +111,12 @@ NCBI에서 제공한 raw data에 대한 파일은 다음과 같다
 그 결과, 질환군별로 나타나는 gene + alias 의 개수는 알레르기 질환군 5,215개, 신경계 질환군 12,739개, 호흡계 질환군 8,515 개였다.
 
 
+## 4. 문제점
+최종적으로 genetic biomarker에 대한 데이터베이스를 마련하기 위해 해결해야 할 문제들은 다음과 같다.
+- 질병명의 약자와 gene symbol이 같은 경우: 예를 들어 CAP라는 문자열은 BRD4 gene의 alias 중 하나이지만, community acquired pneumonia의 약자이기도 하다. 문자열로 비교할 때, 우리가 찾은 문자열이 논문 내에서 gene으로 쓰이건지, 다른 의미로 쓰인 건지 파악하기 어렵다.
+- 알려진 genetic biomarker에 대한 데이터 부족: 많은 biomarker 데이터베이스는 protein, metabolite을 기준으로 하고 있다. Genetic biomarker이 나와있는 데이터베이스가 필요하다. RFP에서 사용할 데이터베이스로 ENCODE, IHEC, SRA, GEO, Charles River Biomarker DB, ResMarkerDB, GOBIOM, IDBD를 제시했지만, 다음과 같은 이유로 부적합하다고 판단했다.
+ - IDBD: 감염성 질환에 대한 biomarker가 나와있다. 환경성 질환은 비감염성을 전제로 하고 있기 때문에 부적합
+ - GOBIOM: 라이선스 필요
+ - ResMarkerDB: Immunoglobulin biomarker를 주로 하고, cancer에 대한 데이터가 주력
+나머지 데이터베이스에 대해서 좀 더 조사가 필요하다.
+- Biomarker와 disease의 상관성을 입증할 방법 필요: 어떠한 통계적인 방법으로 상관성을 입증할 수 있는지 피드백이 필요하다.
