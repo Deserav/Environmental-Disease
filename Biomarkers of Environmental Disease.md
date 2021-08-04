@@ -25,7 +25,7 @@
 
 더불어 RFP에서는 질환군별로 **핵심 질환**을 제시하였는데,
 - 알레르기 / 호흡계 질환군: 천식(Asthma), 폐섬유화(Pulmonary Fibrosis)
-- 신경계 질환군: 자폐증(Autism Spectrum Disorder), 백질뇌증(Progressive Multifocal Leukoencephalopathy, PML), ADHD(Attention Deficit Dyperactivity Disorder)
+- 신경계 질환군: 자폐증(Autism Spectrum Disorder), 백질뇌증(Progressive Multifocal Leukoencephalopathy, PML), ADHD(Attention Deficit yperactivity Disorder)
 
 가 그것이다.
 
