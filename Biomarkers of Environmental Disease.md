@@ -21,14 +21,15 @@
 ## 1. 목적
 본 연구의 목적은 환경성 질환군의 genetic biomarker를 찾고, 데이터베이스를 구축하는 것이다.
 
-환경성 질환은 환경보건법 제2조 제 2호[1]에 따라 환경유해인자와 상관성이 있다고 인정되는 질환 중 감염질환이 아닌 것을 이야기한다. 본 보고서에는 6가지 환경성질환군 중에서 RFP에서 요구한
-- 알레르기 질환군
-- 신경계 질환군
-- 호흡계 질환군
+환경성 질환은 환경보건법 제2조 제 2호[1]에 따라 환경유해인자와 상관성이 있다고 인정되는 질환 중 감염질환이 아닌 것을 이야기한다. 환경성 질환에는 총 6가지가 있는데, 본 보고서에는 RFP에서 요구한 세 가지 질환군인 알레르기 질환군, 신경계 질환군, 호흡계 질환군을 대상으로 연구를 진행하였다.
 
-위 3가지에 대해서 연구를 진행하였다.
+더불어 RFP에서는 질환군별로 **핵심 질환**을 제시하였는데,
+- 알레르기 / 호흡계 질환군: 천식(Asthma), 폐섬유화(Pulmonary Fibrosis)
+- 신경계 질환군: 자폐증(Autism Spectrum Disorder), 백질뇌증(Progressive Multifocal Leukoencephalopathy, PML), ADHD(Attention Deficit Dyperactivity Disorder)
 
-현재까지 선행연구 중에서 genetic biomarker과 disease가 키워드로 포함된 논문을 PubMed에서 찾아, 등장하는 gene과 disease 이름을 파악하여 상관성이 높은 것을 찾는 것이 목표이다.
+가 그것이다.
+
+선행된 연구 중에서 genetic biomarker과 disease가 키워드로 포함된 논문을 PubMed에서 찾아, 등장하는 gene과 disease 이름을 파악하여 상관성이 높은 것을 찾는 것이 목표이다.
 
 ## 2. 과정에 대한 Flowchart
 ![프레젠테이션1 (1)](https://user-images.githubusercontent.com/88135502/127962840-e6dca16f-cb88-4828-ac83-bca73fa456bb.jpg)
@@ -37,17 +38,27 @@
 ## 3. Progress
 
 ### 3.1 ICD의 질병을 분류
-ICD(International Statistical Classification of Diseases and Related Health Problems) [2] 는 세계보건기구(WHO)에서 만든, 질병과 증후군에 대한 국제 표준이다. 본 연구에서 사용한 ICD-11는 ICD의 11번째 개정안으로, 2019년 5월에 채택되었고, 2022년 1월 1일부터 효력을 가진다. 
+[ICD(International Statistical Classification of Diseases and Related Health Problems)](https://www.who.int/standards/classifications/classification-of-diseases) 는 세계보건기구(WHO)에서 만든, 질병과 증후군에 대한 국제 표준이다. 본 연구에서 사용한 ICD-11는 ICD의 11번째 개정안으로, 2019년 5월에 채택되었고, 2022년 1월 1일부터 효력을 가진다. 
 
-우선 ICD-11에서 알레르기 질환군, 신경계 질환군, 호흡계 질환군에 어떤 질환들이 포함되어 있는지 파악하였다. 그리고 각 질병마다 biomarker가 있는지 알아보기 위해, PubMed에서 **(질병명[Title/Abstract]) AND (biomarker[Title/Abstract])** 를 키워드로 검색했을 때 등장하는 논문의 수를 알아보았다. 그 결과는 다음과 같다.
+[ICD-11 질병분류](https://icd.who.int/browse11/l-m/en)
 
-|         |알레르기 질환군| 신경계 질환군| 호흡계 질환군|
-|---------|-------------|------------|-----------|
-|총 질환 개수|385|2175|667|
-|논문이 존재하는 질환의 개수|**149**|**652**|**215**|
-|논문의 수|38,458|383,659|180,255|
+우선 ICD-11에서 알레르기 질환군, 신경계 질환군, 호흡계 질환군이 ICD에서 어떤 명칭으로 되어 있는지 살펴보았다. 
 
-**총 602,372편의 논문**
+- 알레르기 질환군: 04 Diseases of the immune system  / 4A80 - 4A8Z Allergic or hypersensitivity conditions 
+- 신경계 질환: 08 Diseases of the nervous system
+- 호흡계 질환: 12 Diseases of the respiratory system 
+
+이때, 앞서 제시한 **핵심 질환** 중 천식, 폐섬유화, 자폐증, 백질뇌증은 위에 제시된 항목 내에 존재하지만, ADHD는 06 Mental, behavioural or neurodevelopmental disorders라는 독립된 항목에 있었다. 그렇기 때문에 ADHD만 따로 구분하여 연구과정을 진행하였다. 
+
+이렇게 ICD-11에 존재하는 질환군 내의 모든 질병을 파악한다. 그리고 각각의 질병마다 biomarker가 있는지 알아보기 위해, PubMed에서 **(질병명[Title/Abstract]) AND (biomarker[Title/Abstract])** 를 키워드로 검색했을 때 등장하는 논문의 수를 알아보았다. 그 결과는 다음과 같다.
+
+|         |알레르기 질환군| 신경계 질환군| 호흡계 질환군| ADHD |
+|---------|-------------|------------|-----------|------------|
+|총 질환 개수|385|2175|667| 6 |
+|논문이 존재하는 질환의 개수|**149**|**652**|**215**|**1**|
+|논문의 수|38,458|383,659|180,255|205|
+
+**총 602,577편의 논문**
 
 위 결과에서 논문이 존재하는 질환만을 따로 모아 txt 파일로 정리하였고, 아래에 첨부하였다.
 
@@ -56,6 +67,9 @@ ICD(International Statistical Classification of Diseases and Related Health Prob
 [nervDB_shredded_list.txt](https://github.com/Deserav/Environmental-Disease/files/6914677/nervDB_shredded_list.txt)
 
 [respDB_shredded_list.txt](https://github.com/Deserav/Environmental-Disease/files/6914678/respDB_shredded_list.txt)
+
+[ADHD_shredded_list.txt](https://github.com/Deserav/Environmental-Disease/files/6928795/ADHD_shredded_list.txt)
+
 
 반면, 개별 질병에 대한 논문의 수를 다음과 같이 정리하였다.
 
@@ -103,6 +117,8 @@ NCBI에서 제공한 raw data에 대한 파일은 다음과 같다.
 
 [respDB_count.txt](https://github.com/Deserav/Environmental-Disease/files/6916625/respDB_count.txt)
 
+[ADHD_count.txt](https://github.com/Deserav/Environmental-Disease/files/6928796/ADHD_count.txt)
+
 
 마지막으로 질환군별로 등장하는 gene과 alias를 파악하고, 개수를 확인하였다. 
 
@@ -112,7 +128,10 @@ NCBI에서 제공한 raw data에 대한 파일은 다음과 같다.
 
 [respDB_gene_set.txt](https://github.com/Deserav/Environmental-Disease/files/6916632/respDB_gene_set.txt)
 
-그 결과, 질환군별로 나타나는 gene + alias 의 개수는 알레르기 질환군 5,215개, 신경계 질환군 12,739개, 호흡계 질환군 8,515 개였다.
+[ADHD_gene_set.txt](https://github.com/Deserav/Environmental-Disease/files/6928808/ADHD_gene_set.txt)
+
+
+그 결과, 질환군별로 나타나는 gene + alias 의 개수는 알레르기 질환군 5,215개, 신경계 질환군 12,739개, 호흡계 질환군 8,515 개, ADHD가 120개였다.
 
 
 ## 4. 문제점
