@@ -48,7 +48,7 @@
 - 신경계 질환: 08 Diseases of the nervous system
 - 호흡계 질환: 12 Diseases of the respiratory system 
 
-이때, 앞서 제시한 **핵심 질환** 중 천식, 폐섬유화, 자폐증, 백질뇌증은 위에 제시된 항목 내에 존재하지만, ADHD는 06 Mental, behavioural or neurodevelopmental disorders라는 독립된 항목에 있었다. 그렇기 때문에 ADHD만 따로 구분하여 연구과정을 진행하였다. 
+이때, 앞서 제시한 **핵심 질환** 중 천식, 폐섬유화, 자폐증, 백질뇌증은 위에 제시된 항목 내에 존재하지만, ADHD는 06 Mental, behavioural or neurodevelopmental disorders 라는 독립된 챕터에 구분되어 있었다. ADHD는 6A05 - 6A05.Z 항목에 있다. 그렇기 때문에 ADHD만 따로 구분하여 연구과정을 진행하였다. 
 
 이렇게 ICD-11에 존재하는 질환군 내의 모든 질병을 파악한다. 그리고 각각의 질병마다 biomarker가 있는지 알아보기 위해, PubMed에서 **(질병명[Title/Abstract]) AND (biomarker[Title/Abstract])** 를 키워드로 검색했을 때 등장하는 논문의 수를 알아보았다. 그 결과는 다음과 같다.
 
