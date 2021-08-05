@@ -50,34 +50,34 @@
 
 이때, 앞서 제시한 **핵심 질환** 중 천식, 폐섬유화, 자폐증, 백질뇌증은 위에 제시된 항목 내에 존재하지만, ADHD는 06 Mental, behavioural or neurodevelopmental disorders 라는 독립된 챕터에 구분되어 있었다. ADHD는 6A05 - 6A05.Z 항목에 있다. 그렇기 때문에 ADHD만 따로 구분하여 연구과정을 진행하였다. 
 
-이렇게 ICD-11에 존재하는 질환군 내의 모든 질병을 파악한다. 그리고 각각의 질병마다 biomarker가 있는지 알아보기 위해, PubMed에서 **(질병명[Title/Abstract]) AND (biomarker[Title/Abstract])** 를 키워드로 검색했을 때 등장하는 논문의 수를 알아보았다. 그 결과는 다음과 같다.
+이렇게 ICD-11에 존재하는 질환군 내의 모든 질병을 파악한다. 그리고 각각의 질병마다 biomarker가 있는지 알아보기 위해, PubMed에서 **"질병명[Title/Abstract]" AND "biomarker[Title/Abstract]"** 를 키워드로 검색했을 때 등장하는 논문의 수를 알아보았다. 그 결과는 다음과 같다.
 
 |         |알레르기 질환군| 신경계 질환군| 호흡계 질환군| ADHD |
 |---------|-------------|------------|-----------|------------|
 |총 질환 개수|385|2175|667| 6 |
-|논문이 존재하는 질환의 개수|**149**|**652**|**215**|**1**|
-|논문의 수|38,458|383,659|180,255|205|
+|논문이 존재하는 질환의 개수|**149**(수정요)|**652**(수정요)|**94**|**1**|
+|논문의 수|38,458(수정요)|383,659(수정요)|8,682|243|
 
 **총 602,577편의 논문**
 
 위 결과에서 논문이 존재하는 질환만을 따로 모아 txt 파일로 정리하였고, 아래에 첨부하였다.
 
-[allrDB_shredded_list.txt](https://github.com/Deserav/Environmental-Disease/files/6914676/allrDB_shredded_list.txt)
+[allrDB_shredded_list.txt](https://github.com/Deserav/Environmental-Disease/files/6914676/allrDB_shredded_list.txt) (수정요)
 
-[nervDB_shredded_list.txt](https://github.com/Deserav/Environmental-Disease/files/6914677/nervDB_shredded_list.txt)
+[nervDB_shredded_list.txt](https://github.com/Deserav/Environmental-Disease/files/6914677/nervDB_shredded_list.txt) (수정요)
 
-[respDB_shredded_list.txt](https://github.com/Deserav/Environmental-Disease/files/6914678/respDB_shredded_list.txt)
+[respDB_shredded_list.txt](https://github.com/Deserav/Environmental-Disease/files/6914678/respDB_shredded_list.txt) (수정요)
 
 [ADHD_shredded_list.txt](https://github.com/Deserav/Environmental-Disease/files/6928795/ADHD_shredded_list.txt)
 
 
 반면, 개별 질병에 대한 논문의 수를 다음과 같이 정리하였다.
 
-[allr_DB.xlsx](https://github.com/Deserav/Environmental-Disease/files/6915474/allr_DB.xlsx)
+[allr_DB.xlsx](https://github.com/Deserav/Environmental-Disease/files/6915474/allr_DB.xlsx) (수정요)
 
-[nerv_DB.xlsx](https://github.com/Deserav/Environmental-Disease/files/6915475/nerv_DB.xlsx)
+[nerv_DB.xlsx](https://github.com/Deserav/Environmental-Disease/files/6915475/nerv_DB.xlsx) (수정요)
 
-[resp_DB.xlsx](https://github.com/Deserav/Environmental-Disease/files/6915473/resp_DB.xlsx)
+[respDB_8-1-2021.xlsx](https://github.com/Deserav/Environmental-Disease/files/6936185/respDB_8-1-2021.xlsx) (수정요 - 값 오류)
 
 [ADHD.xlsx](https://github.com/Deserav/Environmental-Disease/files/6928915/ADHD.xlsx)
 
