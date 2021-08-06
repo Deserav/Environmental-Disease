@@ -134,27 +134,27 @@ NCBI에서 제공한 raw data에 대한 파일은 다음과 같다.
 
 데이터의 양이 많기 때문에, 아래는 중요한 결과를 요약한 것이다. 다음은 질환별 논문에 등장하는 gene과 alias의 종류와 빈도가 있다.
 
-[allrDB_count.txt](https://github.com/Deserav/Environmental-Disease/files/6914686/allrDB_count.txt) (수정요)
+[allrDB_count.txt](https://github.com/Deserav/Environmental-Disease/files/6946517/allrDB_count.txt)
 
-[nervDB_count.txt](https://github.com/Deserav/Environmental-Disease/files/6914687/nervDB_count.txt) (수정요)
+[nervDB_count.txt](https://github.com/Deserav/Environmental-Disease/files/6946521/nervDB_count.txt)
 
-[respDB_count.txt](https://github.com/Deserav/Environmental-Disease/files/6916625/respDB_count.txt) (수정요)
+[respDB_count.txt](https://github.com/Deserav/Environmental-Disease/files/6946524/respDB_count.txt)
 
 [ADHD_count.txt](https://github.com/Deserav/Environmental-Disease/files/6928796/ADHD_count.txt)
 
 
 아래는 질환군별로 등장하는 gene과 alias를 파악하고, 개수가 포함되어 있다. 
 
-[allrDB_gene_set.txt](https://github.com/Deserav/Environmental-Disease/files/6915328/allrDB_gene_set.txt) (수정요)
+[allrDB_gene_set.txt](https://github.com/Deserav/Environmental-Disease/files/6946539/allrDB_gene_set.txt)
 
-[nervDB_gene_set.txt](https://github.com/Deserav/Environmental-Disease/files/6915327/nervDB_gene_set.txt) (수정요)
+[nervDB_gene_set.txt](https://github.com/Deserav/Environmental-Disease/files/6946536/nervDB_gene_set.txt)
 
-[respDB_gene_set.txt](https://github.com/Deserav/Environmental-Disease/files/6916632/respDB_gene_set.txt) (수정요)
+[respDB_gene_set.txt](https://github.com/Deserav/Environmental-Disease/files/6946534/respDB_gene_set.txt)
 
 [ADHD_gene_set.txt](https://github.com/Deserav/Environmental-Disease/files/6928808/ADHD_gene_set.txt)
 
 
-그 결과, 질환군별로 나타나는 gene + alias 의 개수는 알레르기 질환군 5,215개, 신경계 질환군 12,739개, 호흡계 질환군 8,515 개, ADHD가 120개였다.
+그 결과, 질환군별로 나타나는 gene + alias 의 개수는 알레르기 질환군 869개, 신경계 질환군 2,223개, 호흡계 질환군 1,831 개, ADHD가 120개였다.
 
 
 ## 4. 문제점
