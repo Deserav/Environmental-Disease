@@ -1,3 +1,4 @@
+[ADHD_shredded_list_refined.txt](https://github.com/Deserav/Environmental-Disease/files/6943383/ADHD_shredded_list_refined.txt)
 # 주제: PubMed을 이용한 환경성 질환의 biomarker 탐색
 본 과제에서 NCBI 산하의 데이터베이스인 PubMed의 논문을 이용하여 환경성 질환에 대한 biomarker가 무엇이 있는지 알아보았다.
 
@@ -82,7 +83,7 @@ ICD-11에서 사용한 전체 질병의 목록은 다음과 같다.
 
 [respDB_shredded_list_refined.txt](https://github.com/Deserav/Environmental-Disease/files/6943222/respDB_shredded_list_refined.txt)
 
-[ADHD_shredded_list.txt](https://github.com/Deserav/Environmental-Disease/files/6928795/ADHD_shredded_list.txt)
+[ADHD_shredded_list_refined.txt](https://github.com/Deserav/Environmental-Disease/files/6943385/ADHD_shredded_list_refined.txt)
 
 
 반면, 개별 질병에 대한 논문의 수를 다음과 같이 정리하였다.
