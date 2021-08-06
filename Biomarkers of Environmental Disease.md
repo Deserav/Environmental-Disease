@@ -130,7 +130,9 @@ NCBI에서 제공한 raw data에 대한 파일은 다음과 같다.
 
 
 ### 3.4 Gene의 symbol과 alias를 PubMed 논문에서 찾기
-전 단계에서 선정한 127,918개의 문자열과 18,830 논문의 Abstract와 비교하였다. 이렇게 문자열 비교를 통해 논문마다 등장하는 gene의 종류, 빈도를 계산하였다. 결과물에 대한 파일을 다음과 같다.
+전 단계에서 선정한 127,918개의 문자열과 18,830 논문의 Abstract와 비교하였다. 이렇게 문자열 비교를 통해 논문마다 등장하는 gene의 종류, 빈도를 계산하였다. 그리고 최종적으로 질환 하나에 등장하는 gene의 종류, 개수, 빈도를 계산하였다. 이 결과를 zip로 첨부하였다.
+
+데이터의 양이 많기 때문에, 아래는 중요한 결과를 요약한 것이다. 다음은 질환별 논문에 등장하는 gene과 alias의 종류와 빈도가 있다.
 
 [allrDB_count.txt](https://github.com/Deserav/Environmental-Disease/files/6914686/allrDB_count.txt) (수정요)
 
@@ -141,7 +143,7 @@ NCBI에서 제공한 raw data에 대한 파일은 다음과 같다.
 [ADHD_count.txt](https://github.com/Deserav/Environmental-Disease/files/6928796/ADHD_count.txt)
 
 
-마지막으로 질환군별로 등장하는 gene과 alias를 파악하고, 개수를 확인하였다. 
+아래는 질환군별로 등장하는 gene과 alias를 파악하고, 개수가 포함되어 있다. 
 
 [allrDB_gene_set.txt](https://github.com/Deserav/Environmental-Disease/files/6915328/allrDB_gene_set.txt) (수정요)
 
