@@ -105,7 +105,7 @@ Python의 Biopython 모듈로부터 Entrez와 Medline 모듈을 사용하여, �
 - ICD-11에서 찾은 개별적인 질명에 biomarker라는 키워드와 결합하여 **(질병명[Title/Abstract]) AND (biomarker[Title/Abstract])** 로 검색하였다. 
 - 각 질병마다 검색 결과로 나타나는 논문들의 Title, Abstract, DOI를 txt 파일로 정리하였다. 
  
-이런 식으로 Python을 이용하여 알레르기 질환 149개, 신경계 질환 652개, 호흡계 질환 215개에 txt 파일을 만들어, 논문의 Title, Abstract, DOI를 저장하였다.
+이런 식으로 Python을 이용하여 알레르기 질환 30개, 신경계 질환 256개, 호흡계 질환 93개, ADHD 질환 1에 txt 파일을 만들어, 논문의 Title, Abstract, DOI를 저장하였다.
 
 
 ### 3.3 NCBI에 있는 human gene database로부터 총 gene의 개수 파악
@@ -121,8 +121,8 @@ NCBI에서 제공한 raw data에 대한 파일은 다음과 같다.
 2. Gene과 aliase에 중복인 것을 제거했을 때, 127,994개의 서로 다른 문자열이 생성되었다.
 3. 한 글자 문자열 8개, nan을 제거하면 127,994 - 9 = 127,985개의 문자열이 남는다.
 4. 두 글자 문자열 422개, 세 글자 문자열 4,418개 중에서 자주 사용하는 단어와 철자가 같은 것을 제거했다.
- - II, IN, KO, ME, TO, UP, AM, DO, IV, CO, IF, GO, OK, ID, OF, AN, NA, AS: 18종류
- - SOS, BUG, CAM, ATP, MAX, OUT, FAN, VIP, CAR, LED, APE, RED, NOT, DUO, SHE, ICE, GAS, ENG, FAD, GAP, SET, AIM, SIT, PEN, WAS, PIN, CAN, ZIP, AIR, ARM, AID, GET, TIP, FOG, APP, HOT, BAR, SON, SEA, NOV, HUB, ACT, FOR, CAR, OUT, NOT, AIM, CAN, SEA, PDF, VIA, bet, FAN, HOT, PEN, LAB, ECM, not: 49개
+ - II, IN, KO, ME, TO, UP, AM, DO, IV, CO, IF, GO, OK, ID, OF, AN, NA, AS: 18 종류
+ - SOS, BUG, CAM, ATP, MAX, OUT, FAN, VIP, CAR, LED, APE, RED, NOT, DUO, SHE, ICE, GAS, ENG, FAD, GAP, SET, AIM, SIT, PEN, WAS, PIN, CAN, ZIP, AIR, ARM, AID, GET, TIP, FOG, APP, HOT, BAR, SON, SEA, NOV, HUB, ACT, FOR, CAR, OUT, NOT, AIM, CAN, SEA, PDF, VIA, bet, FAN, HOT, PEN, LAB, ECM, not: 49 종류
 
 최종적으로 127,985 - ( 18 + 49 ) = 127,918의 문자열을 가지고 다음 단계를 진행하였다. 이때 사용한 gene과 alias의 목록은 다음과 같이 첨부했다.
 
@@ -130,7 +130,7 @@ NCBI에서 제공한 raw data에 대한 파일은 다음과 같다.
 
 
 ### 3.4 Gene의 symbol과 alias를 PubMed 논문에서 찾기
-전 단계에서 선정한 127,918개의 문자열과 602,372 논문의 Abstract와 비교하였다. 이렇게 문자열 비교를 통해 논문마다 등장하는 gene의 종류, 빈도를 계산하였다. 결과물에 대한 파일을 다음과 같다.
+전 단계에서 선정한 127,918개의 문자열과 18,830 논문의 Abstract와 비교하였다. 이렇게 문자열 비교를 통해 논문마다 등장하는 gene의 종류, 빈도를 계산하였다. 결과물에 대한 파일을 다음과 같다.
 
 [allrDB_count.txt](https://github.com/Deserav/Environmental-Disease/files/6914686/allrDB_count.txt) (수정요)
 
