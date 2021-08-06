@@ -50,36 +50,51 @@
 
 이때, 앞서 제시한 **핵심 질환** 중 천식, 폐섬유화, 자폐증, 백질뇌증은 위에 제시된 항목 내에 존재하지만, ADHD는 06 Mental, behavioural or neurodevelopmental disorders 라는 독립된 챕터에 구분되어 있었다. ADHD는 6A05 - 6A05.Z 항목에 있다. 그렇기 때문에 ADHD만 따로 구분하여 연구과정을 진행하였다. 
 
+ICD-11에서 사용한 전체 질병의 목록은 다음과 같다.
+
+[allrdisease_8-5-2021.txt](https://github.com/Deserav/Environmental-Disease/files/6936430/allrdisease_8-5-2021.txt)
+
+[nervdisease_8-5-2021.txt](https://github.com/Deserav/Environmental-Disease/files/6936431/nervdisease_8-5-2021.txt)
+
+[respdisease_8-5-2021.txt](https://github.com/Deserav/Environmental-Disease/files/6936432/respdisease_8-5-2021.txt)
+
+[ADHD_8-5-2021.txt](https://github.com/Deserav/Environmental-Disease/files/6936437/ADHD_8-5-2021.txt)
+
+이 목록은 위 ICD-11 사이트에서 텍스트를 복사한 것이다. 여기에 동일한 질병이 다른 분류에 속해있는 경우도 있어서, 그런 중복을 제거하고 과정을 진행하였다. 
+
 이렇게 ICD-11에 존재하는 질환군 내의 모든 질병을 파악한다. 그리고 각각의 질병마다 biomarker가 있는지 알아보기 위해, PubMed에서 **"질병명[Title/Abstract]" AND "biomarker[Title/Abstract]"** 를 키워드로 검색했을 때 등장하는 논문의 수를 알아보았다. 그 결과는 다음과 같다.
 
 |         |알레르기 질환군| 신경계 질환군| 호흡계 질환군| ADHD |
 |---------|-------------|------------|-----------|------------|
-|총 질환 개수|385|2175|667| 6 |
-|논문이 존재하는 질환의 개수|**149**(수정요)|**652**(수정요)|**94**|**1**|
-|논문의 수|38,458(수정요)|383,659(수정요)|8,682|243|
+|총 질환 개수|221|2,181|667| 6 |
+|총 질환 개수(중복 제거)|201|2,108|655|6|
+|논문이 존재하는 질환의 개수|**30**|**256**|**93**|**1**|
+|논문의 수|2,226|9,589|6,810|205|
 
-**총 602,577편의 논문**
+**총 18,868편의 논문**
+
 
 위 결과에서 논문이 존재하는 질환만을 따로 모아 txt 파일로 정리하였고, 아래에 첨부하였다.
 
-[allrDB_shredded_list.txt](https://github.com/Deserav/Environmental-Disease/files/6914676/allrDB_shredded_list.txt) (수정요)
+[allrDB_shredded_list_refined.txt](https://github.com/Deserav/Environmental-Disease/files/6943220/allrDB_shredded_list_refined.txt)
 
-[nervDB_shredded_list.txt](https://github.com/Deserav/Environmental-Disease/files/6914677/nervDB_shredded_list.txt) (수정요)
+[nervDB_shredded_list_refined.txt](https://github.com/Deserav/Environmental-Disease/files/6943221/nervDB_shredded_list_refined.txt)
 
-[respDB_shredded_list.txt](https://github.com/Deserav/Environmental-Disease/files/6914678/respDB_shredded_list.txt) (수정요)
+[respDB_shredded_list_refined.txt](https://github.com/Deserav/Environmental-Disease/files/6943222/respDB_shredded_list_refined.txt)
 
 [ADHD_shredded_list.txt](https://github.com/Deserav/Environmental-Disease/files/6928795/ADHD_shredded_list.txt)
 
 
 반면, 개별 질병에 대한 논문의 수를 다음과 같이 정리하였다.
 
-[allr_DB.xlsx](https://github.com/Deserav/Environmental-Disease/files/6915474/allr_DB.xlsx) (수정요)
+[allrDB_number_of_papers.txt](https://github.com/Deserav/Environmental-Disease/files/6943230/allrDB_number_of_papers.txt)
 
-[nerv_DB.xlsx](https://github.com/Deserav/Environmental-Disease/files/6915475/nerv_DB.xlsx) (수정요)
+[nervDB_number_of_papers.txt](https://github.com/Deserav/Environmental-Disease/files/6943231/nervDB_number_of_papers.txt)
 
-[respDB_8-1-2021.xlsx](https://github.com/Deserav/Environmental-Disease/files/6936185/respDB_8-1-2021.xlsx) (수정요 - 값 오류)
+[respDB_number_of_papers.txt](https://github.com/Deserav/Environmental-Disease/files/6943232/respDB_number_of_papers.txt)
 
-[ADHD.xlsx](https://github.com/Deserav/Environmental-Disease/files/6928915/ADHD.xlsx)
+[ADHD_number_of_papers.txt](https://github.com/Deserav/Environmental-Disease/files/6943277/ADHD_number_of_papers.txt)
+
 
 이로써 ICD-11에 분류되어 있는 알레르기 질환, 신경계 질환, 호흡계 질환 중에 PubMed 데이터베이스에 존재하는 질병의 목록, 논문의 수를 확보하게 되었다.
 
@@ -108,27 +123,30 @@ NCBI에서 제공한 raw data에 대한 파일은 다음과 같다.
  - II, IN, KO, ME, TO, UP, AM, DO, IV, CO, IF, GO, OK, ID, OF, AN, NA, AS: 18종류
  - SOS, BUG, CAM, ATP, MAX, OUT, FAN, VIP, CAR, LED, APE, RED, NOT, DUO, SHE, ICE, GAS, ENG, FAD, GAP, SET, AIM, SIT, PEN, WAS, PIN, CAN, ZIP, AIR, ARM, AID, GET, TIP, FOG, APP, HOT, BAR, SON, SEA, NOV, HUB, ACT, FOR, CAR, OUT, NOT, AIM, CAN, SEA, PDF, VIA, bet, FAN, HOT, PEN, LAB, ECM, not: 49개
 
-최종적으로 127,985 - ( 18 + 49 ) = 127,918의 문자열을 가지고 다음 단계를 진행하였다.
+최종적으로 127,985 - ( 18 + 49 ) = 127,918의 문자열을 가지고 다음 단계를 진행하였다. 이때 사용한 gene과 alias의 목록은 다음과 같이 첨부했다.
+
+[final_genelist.txt](https://github.com/Deserav/Environmental-Disease/files/6943375/final_genelist.txt)
+
 
 ### 3.4 Gene의 symbol과 alias를 PubMed 논문에서 찾기
 전 단계에서 선정한 127,918개의 문자열과 602,372 논문의 Abstract와 비교하였다. 이렇게 문자열 비교를 통해 논문마다 등장하는 gene의 종류, 빈도를 계산하였다. 결과물에 대한 파일을 다음과 같다.
 
-[allrDB_count.txt](https://github.com/Deserav/Environmental-Disease/files/6914686/allrDB_count.txt)
+[allrDB_count.txt](https://github.com/Deserav/Environmental-Disease/files/6914686/allrDB_count.txt) (수정요)
 
-[nervDB_count.txt](https://github.com/Deserav/Environmental-Disease/files/6914687/nervDB_count.txt)
+[nervDB_count.txt](https://github.com/Deserav/Environmental-Disease/files/6914687/nervDB_count.txt) (수정요)
 
-[respDB_count.txt](https://github.com/Deserav/Environmental-Disease/files/6916625/respDB_count.txt)
+[respDB_count.txt](https://github.com/Deserav/Environmental-Disease/files/6916625/respDB_count.txt) (수정요)
 
 [ADHD_count.txt](https://github.com/Deserav/Environmental-Disease/files/6928796/ADHD_count.txt)
 
 
 마지막으로 질환군별로 등장하는 gene과 alias를 파악하고, 개수를 확인하였다. 
 
-[allrDB_gene_set.txt](https://github.com/Deserav/Environmental-Disease/files/6915328/allrDB_gene_set.txt)
+[allrDB_gene_set.txt](https://github.com/Deserav/Environmental-Disease/files/6915328/allrDB_gene_set.txt) (수정요)
 
-[nervDB_gene_set.txt](https://github.com/Deserav/Environmental-Disease/files/6915327/nervDB_gene_set.txt)
+[nervDB_gene_set.txt](https://github.com/Deserav/Environmental-Disease/files/6915327/nervDB_gene_set.txt) (수정요)
 
-[respDB_gene_set.txt](https://github.com/Deserav/Environmental-Disease/files/6916632/respDB_gene_set.txt)
+[respDB_gene_set.txt](https://github.com/Deserav/Environmental-Disease/files/6916632/respDB_gene_set.txt) (수정요)
 
 [ADHD_gene_set.txt](https://github.com/Deserav/Environmental-Disease/files/6928808/ADHD_gene_set.txt)
 
