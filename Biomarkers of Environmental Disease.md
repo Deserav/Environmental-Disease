@@ -192,9 +192,24 @@ NCBI에서 제공한 raw data에 대한 파일은 다음과 같다.
 여기서 우리는 Original_gene을 genetic biomarker로 생각하고 결과를 분석하려 한다.
 
 ### 3.7 결과해석
+각 질환별로 biomarker의 종류는 다음과 같다
+[types_of_biomarker_per_disease.txt](https://github.com/Deserav/Environmental-Disease/files/6949169/types_of_biomarker_per_disease.txt)
+
+각 질환의 biomarker의 수는 다음과 같다.
+[number_of_biomarker_per_disease.txt](https://github.com/Deserav/Environmental-Disease/files/6949155/number_of_biomarker_per_disease.txt)
 
 
 ## 4. 주요 질환군의 결과 분석
+주요 질환군의 biomarker의 종류와 수는 다음과 같다
+
+1. 천식(Asthma) (905개) : [Biomarkers_Asthma.txt](https://github.com/Deserav/Environmental-Disease/files/6949176/Biomarkers_Asthma.txt)
+  - Asthma: 905개
+  - Allergic Asthma: 134개
+  - Non-Allergic Asthma: 18개
+2. 폐섬유화(Idiopathic Pulmonary Fibrosis) (330개) : [Biomarkers_Idiopathic_Pulmonary_Fibrosis.txt](https://github.com/Deserav/Environmental-Disease/files/6949182/Biomarkers_Idiopathic_Pulmonary_Fibrosis.txt)
+3. 자폐증(Autisum Spectrum Disorder) (345개)[Biomarkers_Autism_Spectrum_Disorder.txt](https://github.com/Deserav/Environmental-Disease/files/6949183/Biomarkers_Autism_Spectrum_Disorder.txt)
+4. 백질뇌증(Progressive Multifocal Leukoencephalopathy) (31개) [Biomarkers_Progressive_Multifocal_Leukoencephalopathy.txt](https://github.com/Deserav/Environmental-Disease/files/6949184/Biomarkers_Progressive_Multifocal_Leukoencephalopathy.txt)
+5. ADHD (Attention Deficit Hyperactivity Disorder) (175개) [Biomarkers_ADHD.txt](https://github.com/Deserav/Environmental-Disease/files/6949187/Biomarkers_ADHD.txt)
 
 
 ## 5. 문제점
