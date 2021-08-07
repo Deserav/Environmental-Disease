@@ -70,22 +70,24 @@ ICD-11에서 사용한 전체 질병의 목록은 다음과 같다.
 |총 질환 개수(중복 제거)|201|2,108|655|6| 2970|
 |논문이 존재하는 질환의 개수|**30**|**256**|**93**|**1**|**380**|
 |논문의 수|2,226|9,589|6,810|205|18,830|
+|Gene이름이 등장하는 논문의 수*|1,537|7,694|5,103|125|
 
 **총 18,830편의 논문**
-
+* 섹션 3.4에 결과 첨부 및 
 
 위 결과에서 논문이 존재하는 질환만을 따로 모아 txt 파일로 정리하였고, 아래에 첨부하였다.
 
-[allrDB_shredded_list_refined.txt](https://github.com/Deserav/Environmental-Disease/files/6943220/allrDB_shredded_list_refined.txt)
+[allrDB_shredded_list_refined.txt](https://github.com/Deserav/Environmental-Disease/files/6943220/allrDB_shredded_list_refined.txt) **총 30개의 질환**
 
-[nervDB_shredded_list_refined.txt](https://github.com/Deserav/Environmental-Disease/files/6943221/nervDB_shredded_list_refined.txt)
+[nervDB_shredded_list_refined.txt](https://github.com/Deserav/Environmental-Disease/files/6943221/nervDB_shredded_list_refined.txt) **총 256개의 질환**
 
-[respDB_shredded_list_refined.txt](https://github.com/Deserav/Environmental-Disease/files/6943222/respDB_shredded_list_refined.txt)
+[respDB_shredded_list_refined.txt](https://github.com/Deserav/Environmental-Disease/files/6943222/respDB_shredded_list_refined.txt) **총 93개의 질환**
 
-[ADHD_shredded_list_refined.txt](https://github.com/Deserav/Environmental-Disease/files/6943385/ADHD_shredded_list_refined.txt)
+[ADHD_shredded_list_refined.txt](https://github.com/Deserav/Environmental-Disease/files/6943385/ADHD_shredded_list_refined.txt) **총 1개의 질환**
 
+이후에 편의를 위해 '논문이 존재하는 질환'을 간략히 파일명과 같이 shredded list로 부르기로 한다.
 
-반면, 개별 질병에 대한 논문의 수를 다음과 같이 정리하였다.
+반면, 논문이 존재하는 질환을 대상으로, 각 질환이 몇 개의 논문을 가지고 있는지 다음과 같이 정리하였다.
 
 [allrDB_number_of_papers.txt](https://github.com/Deserav/Environmental-Disease/files/6943230/allrDB_number_of_papers.txt)
 
@@ -101,7 +103,7 @@ ICD-11에서 사용한 전체 질병의 목록은 다음과 같다.
 ### 3.2 PubMed에서 질병별 Title, Abstract, DOI 추출
 Python의 Biopython 모듈로부터 Entrez와 Medline 모듈을 사용하여, 검색 키워드로부터 등장하는 논문들의 Title, Abstract, DOI를 전부 하나의 txt 파일로 정리하였다. 3.1 단계에 첨부한 각각의 txt 파일에 등장한 질병들을 모듈의 input으로 하여 다음의 과정을 진행하였다.
 
-- ICD-11에서 찾은 개별적인 질명에 biomarker라는 키워드와 결합하여 **(질병명[Title/Abstract]) AND (biomarker[Title/Abstract])** 로 검색하였다. 
+- ICD-11에서 찾은 개별적인 질명에 biomarker라는 키워드와 결합하여 **"질병명"[Title/Abstract] AND "biomarker"[Title/Abstract]** 로 검색하였다. 질병명을 정확히 찾기 위해 '질병명'과 'biomarker'에 큰따옴표 처리를 한다.
 - 각 질병마다 검색 결과로 나타나는 논문들의 Title, Abstract, DOI를 txt 파일로 정리하였다. 
  
 이런 식으로 Python을 이용하여 알레르기 질환 30개, 신경계 질환 256개, 호흡계 질환 93개, ADHD 질환 1에 txt 파일을 만들어, 논문의 Title, Abstract, DOI를 저장하였다.
@@ -129,9 +131,20 @@ NCBI에서 제공한 raw data에 대한 파일은 다음과 같다.
 
 
 ### 3.4 Gene의 symbol과 alias를 PubMed 논문에서 찾기
-전 단계에서 선정한 127,918개의 문자열과 18,830 논문의 Abstract와 비교하였다. 이렇게 문자열 비교를 통해 논문마다 등장하는 gene의 종류, 빈도를 계산하였다. 그리고 최종적으로 질환 하나에 등장하는 gene의 종류, 개수, 빈도를 계산하였다. 이 결과를 zip로 첨부하였다.
+전 단계에서 선정한 127,918개의 문자열과 18,830 논문의 Abstract와 비교하였다. 이렇게 문자열 비교를 통해 논문마다 등장하는 gene의 종류, 빈도를 계산하였다. 그리고 최종적으로 질환 하나에 등장하는 gene의 종류, 개수, 빈도를 계산하였다. 이 결과를 zip로 첨부하였다. 이 파일의 구성은 다음과 같다.
+- Shredded list 에 등장하는 질환에 대해 개별적인 파일을 만들고, 파일명을 "질병명 + output"으로 칭한다.
+- 챕어 3.2에서 다운로드 받은 논문과 챕터 3.3의 gene 목록을 비교. Gene이 등장하는 논문들만 output 파일에 들어간다. 즉, 논문에 gene의 이름이 없으면 output 파일에 들어가지 않는다.
+- 하나의 파일에 있는 정보는 다음과 같다.
+  - gene이 존재하는 논문과, gene의 이름
+  - gene의 이름
+  - gene의 등장 빈도
+- 파일의 말미에는 다음의 정보가 있다.
+  - 지금까지 발견한 gene의 수
+  - 지금까지 발견한 gene의 종류
+  - 지금까지 발견한 gene의 빈도
 
-데이터의 양이 많기 때문에, 아래는 중요한 결과를 요약한 것이다. 다음은 질환별 논문에 등장하는 gene과 alias의 종류와 빈도가 있다.
+
+데이터의 양이 많기 때문에, 아래는 중요한 결과를 요약한 것이다. 다음은 질환별 논문에 등장하는 gene과 alias의 종류와 빈도에 대한 결과이다.
 
 [allrDB_count.txt](https://github.com/Deserav/Environmental-Disease/files/6946517/allrDB_count.txt)
 
@@ -142,7 +155,7 @@ NCBI에서 제공한 raw data에 대한 파일은 다음과 같다.
 [ADHD_count.txt](https://github.com/Deserav/Environmental-Disease/files/6928796/ADHD_count.txt)
 
 
-아래는 질환군별로 등장하는 gene과 alias가 포함되어 있다.
+아래는 질환군별로 등장하는 gene과 alias가 표시되어 있다.
 
 [allrDB_gene_set.txt](https://github.com/Deserav/Environmental-Disease/files/6946539/allrDB_gene_set.txt)
 
@@ -155,8 +168,36 @@ NCBI에서 제공한 raw data에 대한 파일은 다음과 같다.
 
 그 결과, 질환군별로 나타나는 gene + alias 의 개수는 알레르기 질환군 869개, 신경계 질환군 2,223개, 호흡계 질환군 1,831 개, ADHD가 120개였다.
 
+마지막으로, 질환군별로, 각 질환마다 gene 이름이 존재하는 논문의 수에 대한 데이터이다. 마지막 줄에는 질환군에서 gene 이름에 포함된 논문의 수가 쓰여 있다.
 
-## 4. 문제점
+[allrDB_number_of_papers_thathave_gene.txt](https://github.com/Deserav/Environmental-Disease/files/6948694/allrDB_number_of_papers_thathave_gene.txt)
+
+[nervDB_number_of_papers_thathave_gene.txt](https://github.com/Deserav/Environmental-Disease/files/6948695/nervDB_number_of_papers_thathave_gene.txt)
+
+[respDB_number_of_papers_thathave_gene.txt](https://github.com/Deserav/Environmental-Disease/files/6948696/respDB_number_of_papers_thathave_gene.txt)
+
+[ADHD_number_of_papers_thathave_gene.txt](https://github.com/Deserav/Environmental-Disease/files/6948697/ADHD_number_of_papers_thathave_gene.txt)
+
+챕터 3.1 표에 표시한 것처럼 gene이 등장하는 논문의 수는 알레르기가 1,537개, 신경계가 7,694개, 호흡계가 5,103개, ADHD가 1,25개이다.
+
+### 3.6 Gene과 Disease를 데이터프레임으로 작성
+챕터 3.4에 있는 count 파일을 바탕으로, 질병과 gene에 대한 데이터프레임으로 정리하였다. Column name의 뜻은 다음과 같다
+- Disease: 질환 이름
+- Category: Allergy - 알레르기 질환군, Nerve - 신경계 지환군, Respire - 호흡계 질환군, ADHD - ADHD 질환
+- Match: 일치한 문자열.
+- Original_gene: Match의 결과가 symbol일 수도 있고, alias일 수도 있다. Alias와 일치한 경우 symbol의 이름을 보여준다.
+
+[gene_disease_original.txt](https://github.com/Deserav/Environmental-Disease/files/6948958/gene_disease_original.txt)
+
+여기서 우리는 Original_gene을 genetic biomarker로 생각하고 결과를 분석하려 한다.
+
+### 3.7 결과해석
+
+
+## 4. 주요 질환군의 결과 분석
+
+
+## 5. 문제점
 최종적으로 genetic biomarker에 대한 데이터베이스를 마련하기 위해 해결해야 할 문제들은 다음과 같다.
 - 질병명의 약자와 gene symbol이 같은 경우: 예를 들어 CAP라는 문자열은 BRD4 gene의 alias 중 하나이지만, community acquired pneumonia의 약자이기도 하다. 문자열로 비교할 때, 우리가 찾은 문자열이 논문 내에서 gene으로 쓰이건지, 다른 의미로 쓰인 건지 파악하기 어렵다.
 - 알려진 genetic biomarker에 대한 데이터 부족: 많은 biomarker 데이터베이스는 protein, metabolite을 기준으로 하고 있다. Genetic biomarker이 나와있는 데이터베이스가 필요하다. RFP에서 사용할 데이터베이스로 ENCODE, IHEC, SRA, GEO, Charles River Biomarker DB, ResMarkerDB, GOBIOM, IDBD를 제시했지만, 다음과 같은 이유로 부적합하다고 판단했다.
@@ -166,3 +207,4 @@ NCBI에서 제공한 raw data에 대한 파일은 다음과 같다.
 
 나머지 데이터베이스에 대해서 좀 더 조사가 필요하다.
 - Biomarker와 disease의 상관성을 입증할 방법 필요: 어떠한 통계적인 방법으로 상관성을 입증할 수 있는지 피드백이 필요하다.
+- Gene의 이름은 고정되어 있지만, alias가 같지만 gene 이름이 다른 경우가 있다. 예를 들어 CD14라는 문자열은 CD14 gene 일수도 있고, NDUFA2의 alias일 가능성도 있다
