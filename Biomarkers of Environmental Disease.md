@@ -76,7 +76,7 @@ ICD-11에서 사용한 전체 질병의 목록은 다음과 같다.
 |총 질환 개수(중복 제거)|201|2,108|655|6| 2970|
 |논문이 존재하는 질환의 개수|**30**|**256**|**93**|**1**|**380**|
 |논문의 수|2,226|9,589|6,810|205|18,830|
-|Gene이름이 등장하는 논문의 수*|1,537|7,694|5,103|125|
+|Gene이름이 등장하는 논문의 수*|1,537|7,694|5,103|125|14,459|
 
 **총 18,830편의 논문**
 
@@ -214,9 +214,9 @@ NCBI에서 제공한 raw data에 대한 파일은 다음과 같다.
   - Allergic Asthma: 134개
   - Non-Allergic Asthma: 18개
 2. 폐섬유화(Idiopathic Pulmonary Fibrosis) (330개) : [Biomarkers_Idiopathic_Pulmonary_Fibrosis.txt](https://github.com/Deserav/Environmental-Disease/files/6949182/Biomarkers_Idiopathic_Pulmonary_Fibrosis.txt)
-3. 자폐증(Autisum Spectrum Disorder) (345개)[Biomarkers_Autism_Spectrum_Disorder.txt](https://github.com/Deserav/Environmental-Disease/files/6949183/Biomarkers_Autism_Spectrum_Disorder.txt)
-4. 백질뇌증(Progressive Multifocal Leukoencephalopathy) (31개) [Biomarkers_Progressive_Multifocal_Leukoencephalopathy.txt](https://github.com/Deserav/Environmental-Disease/files/6949184/Biomarkers_Progressive_Multifocal_Leukoencephalopathy.txt)
-5. ADHD (Attention Deficit Hyperactivity Disorder) (175개) [Biomarkers_ADHD.txt](https://github.com/Deserav/Environmental-Disease/files/6949187/Biomarkers_ADHD.txt)
+3. 자폐증(Autisum Spectrum Disorder) (345개) : [Biomarkers_Autism_Spectrum_Disorder.txt](https://github.com/Deserav/Environmental-Disease/files/6949183/Biomarkers_Autism_Spectrum_Disorder.txt)
+4. 백질뇌증(Progressive Multifocal Leukoencephalopathy) (31개) : [Biomarkers_Progressive_Multifocal_Leukoencephalopathy.txt](https://github.com/Deserav/Environmental-Disease/files/6949184/Biomarkers_Progressive_Multifocal_Leukoencephalopathy.txt)
+5. ADHD (Attention Deficit Hyperactivity Disorder) (175개) : [Biomarkers_ADHD.txt](https://github.com/Deserav/Environmental-Disease/files/6949187/Biomarkers_ADHD.txt)
 
 
 ## 5. 문제점
