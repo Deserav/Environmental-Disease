@@ -1,4 +1,3 @@
-[ADHD_shredded_list_refined.txt](https://github.com/Deserav/Environmental-Disease/files/6943383/ADHD_shredded_list_refined.txt)
 # 주제: PubMed을 이용한 환경성 질환의 biomarker 탐색
 본 과제에서 NCBI 산하의 데이터베이스인 PubMed의 논문을 이용하여 환경성 질환에 대한 biomarker가 무엇이 있는지 알아보았다.
 
