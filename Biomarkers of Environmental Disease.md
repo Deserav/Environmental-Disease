@@ -14,15 +14,15 @@
 
 [3.3 NCBI에 있는 human gene database로부터 총 gene의 개수 파악](https://github.com/Deserav/Environmental-Disease/blob/main/Biomarkers%20of%20Environmental%20Disease.md#33-ncbi%EC%97%90-%EC%9E%88%EB%8A%94-human-gene-database%EB%A1%9C%EB%B6%80%ED%84%B0-%EC%B4%9D-gene%EC%9D%98-%EA%B0%9C%EC%88%98-%ED%8C%8C%EC%95%85) 
 
-[3.4 Gene의 symbol과 alias를 PubMed 논문에서 찾기](https://github.com/Deserav/Environmental-Disease/blob/main/Biomarkers%20of%20Environmental%20Disease.md#34-gene%EC%9D%98-symbol%EA%B3%BC-alias%EB%A5%BC-pubmed-%EB%85%BC%EB%AC%B8%EC%97%90%EC%84%9C)
+[3.4 Gene의 symbol과 alias를 PubMed 논문에서 찾기](https://github.com/Deserav/Environmental-Disease/blob/main/Biomarkers%20of%20Environmental%20Disease.md#34-gene%EC%9D%98-symbol%EA%B3%BC-alias%EB%A5%BC-pubmed-%EB%85%BC%EB%AC%B8%EC%97%90%EC%84%9C-%EC%B0%BE%EA%B8%B0)
 
-[3.5 Gene과 Disease를 데이터프레임으로 작성]
+[3.5 Gene과 Disease를 데이터프레임으로 작성](https://github.com/Deserav/Environmental-Disease/blob/main/Biomarkers%20of%20Environmental%20Disease.md#35-gene%EA%B3%BC-disease%EB%A5%BC-%EB%8D%B0%EC%9D%B4%ED%84%B0%ED%94%84%EB%A0%88%EC%9E%84%EC%9C%BC%EB%A1%9C-%EC%9E%91%EC%84%B1)
 
-[3.6 결과해석]
+[3.6 결과해석](https://github.com/Deserav/Environmental-Disease/blob/main/Biomarkers%20of%20Environmental%20Disease.md#36-%EA%B2%B0%EA%B3%BC%ED%95%B4%EC%84%9D)
 
-[4. 주요 질환군의 결과 분석]
+[4. 주요 질환군의 결과 분석](https://github.com/Deserav/Environmental-Disease/blob/main/Biomarkers%20of%20Environmental%20Disease.md#4-%EC%A3%BC%EC%9A%94-%EC%A7%88%ED%99%98%EA%B5%B0%EC%9D%98-%EA%B2%B0%EA%B3%BC-%EB%B6%84%EC%84%9D)
 
-[5. 문제점](https://github.com/Deserav/Environmental-Disease/blob/main/Biomarkers%20of%20Environmental%20Disease.md#4-%EB%AC%B8%EC%A0%9C%EC%A0%90)
+[5. 문제점](https://github.com/Deserav/Environmental-Disease/blob/main/Biomarkers%20of%20Environmental%20Disease.md#5-%EB%AC%B8%EC%A0%9C%EC%A0%90)
 
 ## 1. 목적
 본 연구의 목적은 환경성 질환군의 genetic biomarker를 찾고, 데이터베이스를 구축하는 것이다.
