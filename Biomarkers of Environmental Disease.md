@@ -142,7 +142,7 @@ NCBI에서 제공한 raw data에 대한 파일은 다음과 같다.
 [ADHD_count.txt](https://github.com/Deserav/Environmental-Disease/files/6928796/ADHD_count.txt)
 
 
-아래는 질환군별로 등장하는 gene과 alias를 파악하고, 개수가 포함되어 있다. 
+아래는 질환군별로 등장하는 gene과 alias가 포함되어 있다.
 
 [allrDB_gene_set.txt](https://github.com/Deserav/Environmental-Disease/files/6946539/allrDB_gene_set.txt)
 
