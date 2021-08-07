@@ -12,11 +12,17 @@
 
 [3.2 PubMed에서 질병별 Title, Abstract, DOI 추출](https://github.com/Deserav/Environmental-Disease/blob/main/Biomarkers%20of%20Environmental%20Disease.md#32-pubmed%EC%97%90%EC%84%9C-%EC%A7%88%EB%B3%91%EB%B3%84-title-abstract-doi-%EC%B6%94%EC%B6%9C)
 
-[3.3 NCBI에 있는 human gene database로부터 총 gene의 개수 파악](https://github.com/Deserav/Environmental-Disease/blob/main/Biomarkers%20of%20Environmental%20Disease.md#33-ncbi%EC%97%90-%EC%9E%88%EB%8A%94-human-gene-database%EB%A1%9C-%EB%B6%80%ED%84%B0-%EA%B0%81-%EB%85%BC%EB%AC%B8%EB%B3%84-%EB%93%B1%EC%9E%A5%ED%95%98%EB%8A%94-gene-%ED%8C%8C%EC%95%85)
+[3.3 NCBI에 있는 human gene database로부터 총 gene의 개수 파악](https://github.com/Deserav/Environmental-Disease/blob/main/Biomarkers%20of%20Environmental%20Disease.md#33-ncbi%EC%97%90-%EC%9E%88%EB%8A%94-human-gene-database%EB%A1%9C%EB%B6%80%ED%84%B0-%EC%B4%9D-gene%EC%9D%98-%EA%B0%9C%EC%88%98-%ED%8C%8C%EC%95%85) 
 
 [3.4 Gene의 symbol과 alias를 PubMed 논문에서 찾기](https://github.com/Deserav/Environmental-Disease/blob/main/Biomarkers%20of%20Environmental%20Disease.md#34-gene%EC%9D%98-symbol%EA%B3%BC-alias%EB%A5%BC-pubmed-%EB%85%BC%EB%AC%B8%EC%97%90%EC%84%9C)
 
-[4. 문제점](https://github.com/Deserav/Environmental-Disease/blob/main/Biomarkers%20of%20Environmental%20Disease.md#4-%EB%AC%B8%EC%A0%9C%EC%A0%90)
+[3.5 Gene과 Disease를 데이터프레임으로 작성]
+
+[3.6 결과해석]
+
+[4. 주요 질환군의 결과 분석]
+
+[5. 문제점](https://github.com/Deserav/Environmental-Disease/blob/main/Biomarkers%20of%20Environmental%20Disease.md#4-%EB%AC%B8%EC%A0%9C%EC%A0%90)
 
 ## 1. 목적
 본 연구의 목적은 환경성 질환군의 genetic biomarker를 찾고, 데이터베이스를 구축하는 것이다.
@@ -180,7 +186,7 @@ NCBI에서 제공한 raw data에 대한 파일은 다음과 같다.
 
 챕터 3.1 표에 표시한 것처럼 gene이 등장하는 논문의 수는 알레르기가 1,537개, 신경계가 7,694개, 호흡계가 5,103개, ADHD가 1,25개이다.
 
-### 3.6 Gene과 Disease를 데이터프레임으로 작성
+### 3.5 Gene과 Disease를 데이터프레임으로 작성
 챕터 3.4에 있는 count 파일을 바탕으로, 질병과 gene에 대한 데이터프레임으로 정리하였다. Column name의 뜻은 다음과 같다
 - Disease: 질환 이름
 - Category: Allergy - 알레르기 질환군, Nerve - 신경계 지환군, Respire - 호흡계 질환군, ADHD - ADHD 질환
@@ -191,7 +197,7 @@ NCBI에서 제공한 raw data에 대한 파일은 다음과 같다.
 
 여기서 우리는 Original_gene을 genetic biomarker로 생각하고 결과를 분석하려 한다.
 
-### 3.7 결과해석
+### 3.6 결과해석
 각 질환별로 biomarker의 종류는 다음과 같다
 [types_of_biomarker_per_disease.txt](https://github.com/Deserav/Environmental-Disease/files/6949169/types_of_biomarker_per_disease.txt)
 
