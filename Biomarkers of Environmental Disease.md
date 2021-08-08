@@ -237,6 +237,7 @@ NCBI에서 제공한 raw data에 대한 파일은 다음과 같다.
 - Asthma:	905
 - Allergic asthma:	134
 - Non-allergic asthma:	18
+
 총 1,454개의 중복
 
 ## 4. 핵심 질환의 결과 분석
