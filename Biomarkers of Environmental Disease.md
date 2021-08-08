@@ -228,7 +228,7 @@ NCBI에서 제공한 raw data에 대한 파일은 다음과 같다.
   
   - 개수: [ADHD_number_of_biomarkers.txt](https://github.com/Deserav/Environmental-Disease/files/6950524/ADHD_number_of_biomarkers.txt)
 
-이 네 항목의 biomarker 수를 모두 합하면 18,275개로, 앞서 구한 16,821보다 1,454개가 많다. 그 이유는 ICD-11 분류상 알레르기 질환군과 호흡계 질환 군 중 천식(Asthma) 관련 질병이 중복되기 때문이다. 중복되는 질병명은 다음과 같다.
+이 네 항목의 biomarker 수를 모두 합하면 18,275개로, 앞서 구한 16,821보다 1,454개가 많다. 그 이유는 ICD-11 분류상 알레르기 질환군과 호흡계 질환 군 중 비염(Rhinitis)과 천식(Asthma) 관련 질병이 중복되기 때문이다. 중복되는 질병명은 다음과 같다.
 
 - Allergic rhinitis: 188
 - Non-allergic rhinitis:	24
