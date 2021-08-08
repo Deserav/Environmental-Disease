@@ -205,6 +205,27 @@ NCBI에서 제공한 raw data에 대한 파일은 다음과 같다.
 각 질환의 biomarker의 수는 다음과 같다.
 [number_of_biomarker_per_disease.txt](https://github.com/Deserav/Environmental-Disease/files/6949155/number_of_biomarker_per_disease.txt)
 
+질환군별로 정리했을 대는  다음과 같다.
+1. 알레르기 질환군: **총 1933개**
+  - 종류: [allrDB_types_of_biomarkers.txt](https://github.com/Deserav/Environmental-Disease/files/6950514/allrDB_types_of_biomarkers.txt)
+
+  - 개수: [allrDB_number_of_biomarkers.txt](https://github.com/Deserav/Environmental-Disease/files/6950525/allrDB_number_of_biomarkers.txt)
+
+2. 신경계 질환군: **총 9533개**
+  - 종류: [nervDB_types_of_biomarkers.txt](https://github.com/Deserav/Environmental-Disease/files/6950516/nervDB_types_of_biomarkers.txt)
+  
+  - 개수: [nervDB_number_of_biomarkers.txt](https://github.com/Deserav/Environmental-Disease/files/6950520/nervDB_number_of_biomarkers.txt)
+
+3. 호흡계 질환군: **총 6634개**
+  - 종류: [respDB_types_of_biomarkers.txt](https://github.com/Deserav/Environmental-Disease/files/6950521/respDB_types_of_biomarkers.txt)
+
+  - 개수: [respDB_number_of_biomarkers.txt](https://github.com/Deserav/Environmental-Disease/files/6950522/respDB_number_of_biomarkers.txt)
+
+4. ADHD 질환군: **총 175개**
+  - 종류: [ADHD_types_of_biomarkers.txt](https://github.com/Deserav/Environmental-Disease/files/6950523/ADHD_types_of_biomarkers.txt)
+  
+  - 개수: [ADHD_number_of_biomarkers.txt](https://github.com/Deserav/Environmental-Disease/files/6950524/ADHD_number_of_biomarkers.txt)
+
 
 ## 4. 핵심 질환의 결과 분석
 핵심 질환의 biomarker의 종류와 수는 다음과 같다
