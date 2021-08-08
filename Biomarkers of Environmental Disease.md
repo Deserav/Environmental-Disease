@@ -206,8 +206,8 @@ NCBI에서 제공한 raw data에 대한 파일은 다음과 같다.
 [number_of_biomarker_per_disease.txt](https://github.com/Deserav/Environmental-Disease/files/6949155/number_of_biomarker_per_disease.txt)
 
 
-## 4. 주요 질환군의 결과 분석
-주요 질환군의 biomarker의 종류와 수는 다음과 같다
+## 4. 핵심 질환의 결과 분석
+핵심 질환의 biomarker의 종류와 수는 다음과 같다
 
 1. 천식(Asthma) (905개) : [Biomarkers_Asthma.txt](https://github.com/Deserav/Environmental-Disease/files/6949176/Biomarkers_Asthma.txt)
   - Asthma: 905개
