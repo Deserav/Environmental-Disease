@@ -203,7 +203,9 @@ NCBI에서 제공한 raw data에 대한 파일은 다음과 같다.
 [types_of_biomarker_per_disease.txt](https://github.com/Deserav/Environmental-Disease/files/6949169/types_of_biomarker_per_disease.txt)
 
 각 질환의 biomarker의 수는 다음과 같다.
-[number_of_biomarker_per_disease.txt](https://github.com/Deserav/Environmental-Disease/files/6949155/number_of_biomarker_per_disease.txt)
+[number_of_biomarker_per_disease.txt](https://github.com/Deserav/Environmental-Disease/files/6950667/number_of_biomarker_per_disease.txt)
+
+가장 아래줄에 지금까지 나온 biomarker의 수가 나타있는데, 총 **16,821개** 이다. 이 수치는 중복된 질병을 제외한 수치이다.
 
 질환군별로 정리했을 대는  다음과 같다.
 1. 알레르기 질환군: **총 1933개**
@@ -226,6 +228,16 @@ NCBI에서 제공한 raw data에 대한 파일은 다음과 같다.
   
   - 개수: [ADHD_number_of_biomarkers.txt](https://github.com/Deserav/Environmental-Disease/files/6950524/ADHD_number_of_biomarkers.txt)
 
+이 네 항목의 biomarker 수를 모두 합하면 18,275개로, 앞서 구한 16,821보다 1,454개가 많다. 그 이유는 ICD-11 분류상 알레르기 질환군과 호흡계 질환 군 중 천식(Asthma) 관련 질병이 중복되기 때문이다. 중복되는 질병명은 다음과 같다.
+
+- Allergic rhinitis: 188
+- Non-allergic rhinitis:	24
+- Chronic rhinosinusitis:	143
+- Nasal polyp:	33
+- Asthma:	905
+- Allergic asthma:	134
+- Non-allergic asthma:	18
+총 1,454개의 중복
 
 ## 4. 핵심 질환의 결과 분석
 핵심 질환의 biomarker의 종류와 수는 다음과 같다
