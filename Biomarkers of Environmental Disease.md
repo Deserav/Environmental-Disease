@@ -246,11 +246,11 @@ NCBI에서 제공한 raw data에 대한 파일은 다음과 같다.
 
 #### 3.6.2 Biomarker - Disease Link
 바이오마커를 기준으로 삼은 경우, 하나의 바이오마커에 여러 개의 disease가 나타나는 경우가 있다. 이런 biomarker의 수를 찾기 위해 Venn Diagram으로 정리하였다.
-![venn_diagram](https://user-images.githubusercontent.com/88135502/128660396-d9a8e9df-c785-4037-92e6-d79eb91d3fc1.png)
+![venn_diagram](https://user-images.githubusercontent.com/88135502/128726696-6c400a69-5947-4f13-9733-5b29c4cd611a.png)
 
 
 ## 4. 핵심 질환의 결과 분석
-핵심 질환의 biomarker의 종류와 수는 다음과 같다
+PubMed 논문에서 찾은 핵심 질환의 biomarker의 종류와 수는 다음과 같다
 
 1. 천식(Asthma) (905개) : [Biomarkers_Asthma.txt](https://github.com/Deserav/Environmental-Disease/files/6949176/Biomarkers_Asthma.txt)
   - Asthma: 905개
@@ -261,6 +261,20 @@ NCBI에서 제공한 raw data에 대한 파일은 다음과 같다.
 4. 백질뇌증(Progressive Multifocal Leukoencephalopathy) (31개) : [Biomarkers_Progressive_Multifocal_Leukoencephalopathy.txt](https://github.com/Deserav/Environmental-Disease/files/6949184/Biomarkers_Progressive_Multifocal_Leukoencephalopathy.txt)
 5. ADHD (Attention Deficit Hyperactivity Disorder) (175개) : [Biomarkers_ADHD.txt](https://github.com/Deserav/Environmental-Disease/files/6949187/Biomarkers_ADHD.txt)
 
+반면 MarkerDB에서 제공한 데이터프레임으로부터, 핵실 질환의 bioamrker은 다음과 같다.
+
+1. 천식 (Asthma) : 2개 (NOTCH4, BRCA2)
+2. 폐섬유화 (Idiopathic Pulmonary Fibrosis) : 0개
+3. 자폐증 (Autism Spectrum Disorder) : 1개 (MACROD2)
+4. 백질뇌증 (Progressive Multifocal Leukocephalopathy) : 0개
+5. ADHD (Attention Deficit Hyperactivity Disorder) : 0개
+
+그러나, 핵심 질환과 연관이 있는 질병에 대해서 biomarker가 존재하여 이에 대해서 분석해 보았다. 
+
+(질병의 연관성에 대한 그림)
+
+1. 다발성 경화증 (Multiple sclerosis) : 3개 (IL2RA, TNFRSF1A, IL7R)
+2. 낭포성 섬유증 (Cystic fibrosis) : 1개 (CFTR)
 
 ## 5. 문제점
 최종적으로 genetic biomarker에 대한 데이터베이스를 마련하기 위해 해결해야 할 문제들은 다음과 같다.
