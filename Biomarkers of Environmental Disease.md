@@ -199,6 +199,10 @@ NCBI에서 제공한 raw data에 대한 파일은 다음과 같다.
 여기서 우리는 Original_gene을 genetic biomarker로 생각하고 결과를 분석하려 한다.
 
 ### 3.6 결과해석
+질병과 biomarker의 상관성은, 기준을 질병으로 볼때와 biomarker로 볼때가 다르기 때문에 따로 결과를 명시하였다.
+
+#### 3.6.1 Disease - Biomarker Link
+
 각 질환별로 biomarker의 종류는 다음과 같다
 [types_of_biomarker_per_disease.txt](https://github.com/Deserav/Environmental-Disease/files/6949169/types_of_biomarker_per_disease.txt)
 
@@ -239,6 +243,11 @@ NCBI에서 제공한 raw data에 대한 파일은 다음과 같다.
 - Non-allergic asthma:	18
 
 총 1,454개의 중복
+
+#### 3.6.2 Biomarker - Disease Link
+바이오마커를 기준으로 삼은 경우, 하나의 바이오마커에 여러 개의 disease가 나타나는 경우가 있다. 이런 biomarker의 수를 찾기 위해 Venn Diagram으로 정리하였다.
+![venn_diagram](https://user-images.githubusercontent.com/88135502/128660396-d9a8e9df-c785-4037-92e6-d79eb91d3fc1.png)
+
 
 ## 4. 핵심 질환의 결과 분석
 핵심 질환의 biomarker의 종류와 수는 다음과 같다
