@@ -261,7 +261,7 @@ PubMed 논문에서 찾은 핵심 질환의 biomarker의 종류와 수는 다음
 4. 백질뇌증(Progressive Multifocal Leukoencephalopathy) (31개) : [Biomarkers_Progressive_Multifocal_Leukoencephalopathy.txt](https://github.com/Deserav/Environmental-Disease/files/6949184/Biomarkers_Progressive_Multifocal_Leukoencephalopathy.txt)
 5. ADHD (Attention Deficit Hyperactivity Disorder) (175개) : [Biomarkers_ADHD.txt](https://github.com/Deserav/Environmental-Disease/files/6949187/Biomarkers_ADHD.txt)
 
-반면 MarkerDB에서 제공한 데이터프레임으로부터, 핵실 질환의 bioamrker은 다음과 같다.
+반면 MarkerDB에서 제공한 데이터프레임으로부터, 핵실 질환의 biomarker은 다음과 같다.
 
 1. 천식 (Asthma) : 2개 (NOTCH4, BRCA2)
 2. 폐섬유화 (Idiopathic Pulmonary Fibrosis) : 0개
@@ -269,9 +269,30 @@ PubMed 논문에서 찾은 핵심 질환의 biomarker의 종류와 수는 다음
 4. 백질뇌증 (Progressive Multifocal Leukocephalopathy) : 0개
 5. ADHD (Attention Deficit Hyperactivity Disorder) : 0개
 
+이 데이터베이스에서 제공한 biomarker 중에서 핵심 질환에 관련된 biomarker가 3개뿐이었다. 여기서 문제는 NOTCH4, BRCA2, MACROD2가 다음의 결과에 나타나지 않았다는 것이다.
+
+[Asthma_output.txt](https://github.com/Deserav/Environmental-Disease/files/6958690/Asthma_output.txt)
+
+[Autism spectrum disorder_output.txt](https://github.com/Deserav/Environmental-Disease/files/6958688/Autism.spectrum.disorder_output.txt)
+
+그 이유는 검색 시 "biomarker"라는 키워드가 추가되면서, 이 gene들이 검색 결과에서 누락되었기 때문이다.
+
+```
+search1 = '"Autism spectrum disorder"[Title/Abstract] AND "biomarker"[Title/Abstract] AND "MACROD2"[Title/Abstract]'
+handle1 = Entrez.esearch(db = "pubmed", term = search1) # the process to find how many papers in a single search keyword
+record1 = Entrez.read(handle1)
+handle1.close()
+count1 = int(record1["Count"])
+
+print(count1)
+```
+위와 같이 검색하는 경우 결과의 개수가 0이다.
+
 그러나, 핵심 질환과 연관이 있는 질병에 대해서 biomarker가 존재하여 이에 대해서 분석해 보았다. 
 
-(질병의 연관성에 대한 그림)
+![Figure_1](https://user-images.githubusercontent.com/88135502/128812175-6a84177d-fcbb-40f2-b185-89d190daa315.png)
+
+![Figure_2](https://user-images.githubusercontent.com/88135502/128812193-8fea9d45-980d-4e6a-a4c0-8ea67ca5605b.png)
 
 1. 다발성 경화증 (Multiple sclerosis) : 3개 (IL2RA, TNFRSF1A, IL7R)
 2. 낭포성 섬유증 (Cystic fibrosis) : 1개 (CFTR)
@@ -286,4 +307,5 @@ PubMed 논문에서 찾은 핵심 질환의 biomarker의 종류와 수는 다음
 
 나머지 데이터베이스에 대해서 좀 더 조사가 필요하다.
 - Biomarker와 disease의 상관성을 입증할 방법 필요: 어떠한 통계적인 방법으로 상관성을 입증할 수 있는지 피드백이 필요하다.
-- Gene의 이름은 고정되어 있지만, alias가 같지만 gene 이름이 다른 경우가 있다. 예를 들어 CD14라는 문자열은 CD14 gene 일수도 있고, NDUFA2의 alias일 가능성도 있다
+- Gene의 이름은 고정되어 있지만, alias가 같지만 gene 이름이 다른 경우가 있다. 예를 들어 CD14라는 문자열은 CD14 gene 일수도 있고, NDUFA2의 alias일 가능성도 있다.
+- 논문 내용에 biomarker라는 단어가 없을 때, 우리가 원하는 gene이 있어도 찾을 수 없다는 문제가 있다. 챕터 4에서 보았듯이, 검색 키워드에 "biomarker"를 추가함으로써, 프로그램이 NOTCH4, BRCA2, MACROD2를 찾아내지 못하는 일이 발생하였다. 
