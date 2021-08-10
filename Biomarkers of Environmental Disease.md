@@ -250,6 +250,8 @@ NCBI에서 제공한 raw data에 대한 파일은 다음과 같다.
 
 
 ## 4. 핵심 질환의 결과 분석
+
+### 4.1 핵심 질환 biomarker 데이터
 PubMed 논문에서 찾은 핵심 질환의 biomarker의 종류와 수는 다음과 같다
 
 1. 천식(Asthma) (905개) : [Biomarkers_Asthma.txt](https://github.com/Deserav/Environmental-Disease/files/6949176/Biomarkers_Asthma.txt)
@@ -261,7 +263,7 @@ PubMed 논문에서 찾은 핵심 질환의 biomarker의 종류와 수는 다음
 4. 백질뇌증(Progressive Multifocal Leukoencephalopathy) (31개) : [Biomarkers_Progressive_Multifocal_Leukoencephalopathy.txt](https://github.com/Deserav/Environmental-Disease/files/6949184/Biomarkers_Progressive_Multifocal_Leukoencephalopathy.txt)
 5. ADHD (Attention Deficit Hyperactivity Disorder) (175개) : [Biomarkers_ADHD.txt](https://github.com/Deserav/Environmental-Disease/files/6949187/Biomarkers_ADHD.txt)
 
-반면 MarkerDB에서 제공한 데이터프레임으로부터, 핵실 질환의 biomarker은 다음과 같다.
+반면 MarkerDB에서 제공한 데이터로부터, 핵실 질환의 biomarker은 다음과 같다.
 
 1. 천식 (Asthma) : 2개 (NOTCH4, BRCA2)
 2. 폐섬유화 (Idiopathic Pulmonary Fibrosis) : 0개
@@ -269,7 +271,7 @@ PubMed 논문에서 찾은 핵심 질환의 biomarker의 종류와 수는 다음
 4. 백질뇌증 (Progressive Multifocal Leukocephalopathy) : 0개
 5. ADHD (Attention Deficit Hyperactivity Disorder) : 0개
 
-이 데이터베이스에서 제공한 biomarker 중에서 핵심 질환에 관련된 biomarker가 3개뿐이었다. 여기서 문제는 NOTCH4, BRCA2, MACROD2가 다음의 결과에 나타나지 않았다는 것이다.
+이 데이터베이스에서 제공한 biomarker 중에서 핵심 질환에 관련된 biomarker가 3개뿐이었다. NOTCH4, BRCA2, MACROD2이 그것인데, 챕터 3.4의 분석 과정에서 등장하지 않았던 gene들이었다.
 
 [Asthma_output.txt](https://github.com/Deserav/Environmental-Disease/files/6958690/Asthma_output.txt)
 
@@ -288,14 +290,34 @@ print(count1)
 ```
 위와 같이 검색하는 경우 결과의 개수가 0이다.
 
-그러나, 핵심 질환과 연관이 있는 질병에 대해서 biomarker가 존재하여 이에 대해서 분석해 보았다. 
+### 4.2 유사한 질병과 같이 분석
+백질뇌증과 폐섬유화의 경우, 비슷한 증상을 가진 질병과 연관되어 있는 경우가 있어, 이에 대한 분석이 필요했다.
+Output file을 통해, 다음의 질병이 연관이 있다는 것을 알 수 있었다.
 
-![Figure_1](https://user-images.githubusercontent.com/88135502/128812175-6a84177d-fcbb-40f2-b185-89d190daa315.png)
+1. 폐섬유증(Idiopathic pulmonary fibrosis, IPF), 만성폐쇄성폐질환(Chronic Obstructive Pulmonary Disease, COPD), 낭포성 섬유증(Cystic fibrosis, CF)
+2. 백질뇌증(Progressive multifocal leukoencephalopathy, PML), 다발성 경화증(Multiple sceloris)
 
-![Figure_2](https://user-images.githubusercontent.com/88135502/128812193-8fea9d45-980d-4e6a-a4c0-8ea67ca5605b.png)
+마찬가지로 이 질병들도 MarkerDB에서 biomarker가 존재하는지 알아보았고, 그 결과는 다음과 같았다. 
 
-1. 다발성 경화증 (Multiple sclerosis) : 3개 (IL2RA, TNFRSF1A, IL7R)
-2. 낭포성 섬유증 (Cystic fibrosis) : 1개 (CFTR)
+1. 다발성 경화증 (Multiple sclerosis, MS) : 3개 (IL2RA, TNFRSF1A, IL7R)
+2. 만성폐쇄성폐질환 (Chronic Obstructive Pulmonary Disease, COPD): 0개
+3. 낭포성 섬유증 (Cystic fibrosis, CF) : 1개 (CFTR)
+
+여기서 찾은 gene은 IL2RA, TNFRSF1A, IL7R, CFTR 네 종류였다. 데이터프레임에서 이 gene들에 나타는 질병은 다음과 같다.
+
+1. IL2RA: Idiopathic pulmonary fibrosis, Pneumonia, Chronic bronchiolitis, Allergic asthma, Asthma, Chronic obstructive pulmonary disease, Coma, Myelopathy, Status elipticus, Multiple sclerosis
+2. TNFRSF1A: Chronic obstructive pulmonary disease, Concussion, Coma
+3. IL7R: Multiple sclerosis
+4. CFTR: Cystic fibrosis, Bronchiectasis, Asthma
+
+데이터프레임을 바탕으로 유사한 질병끼리 모아 Venn Diagram으로 표현하였다.
+
+![Figure_1](https://user-images.githubusercontent.com/88135502/128814868-dca4240d-275a-4dca-bbc8-5427765202f2.png)
+
+![Figure_2](https://user-images.githubusercontent.com/88135502/128814882-66ceefcf-9424-4827-8f60-5aeefcf2e69f.png)
+
+두 번째 그림에서 눈여겨 볼 것은, PML의 biomarker 집합은 MS의 부분집합이라는 것이다. PML의 biomarker 31종류 전부 MS 내에 포함이 되어 있었다.
+
 
 ## 5. 문제점
 최종적으로 genetic biomarker에 대한 데이터베이스를 마련하기 위해 해결해야 할 문제들은 다음과 같다.
