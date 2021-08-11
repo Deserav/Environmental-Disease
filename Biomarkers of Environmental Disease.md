@@ -318,11 +318,11 @@ Output file을 통해, 다음의 질병이 연관이 있다는 것을 알 수 �
 
 두 번째 그림에서 눈여겨 볼 것은, PML의 biomarker 집합은 MS의 부분집합이라는 것이다. PML의 biomarker 31종류 전부 MS 내에 포함이 되어 있었다.
 
-![resp](https://user-images.githubusercontent.com/88135502/128962914-f678051c-434c-4186-9631-037ad9dfda8c.jpg =150x100)
+![resp](https://user-images.githubusercontent.com/88135502/128962914-f678051c-434c-4186-9631-037ad9dfda8c.jpg)
 
-![nerv](https://user-images.githubusercontent.com/88135502/128962926-333bbee5-ba00-4eaf-bf03-586cb8427a03.jpg =150x100)
+![nerv](https://user-images.githubusercontent.com/88135502/128962926-333bbee5-ba00-4eaf-bf03-586cb8427a03.jpg)
 
-![brain](https://user-images.githubusercontent.com/88135502/128962932-4d945985-3c2d-4a09-9ee9-39ed82c0c0c1.jpg =150x100)
+![brain](https://user-images.githubusercontent.com/88135502/128962932-4d945985-3c2d-4a09-9ee9-39ed82c0c0c1.jpg)
 
 
 ## 5. 문제점
