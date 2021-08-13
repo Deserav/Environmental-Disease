@@ -196,6 +196,7 @@ NCBI에서 제공한 raw data에 대한 파일은 다음과 같다.
 
 [gene_disease_original.txt](https://github.com/Deserav/Environmental-Disease/files/6948958/gene_disease_original.txt)
 
+편의를 위해 위 데이터프레임은 이하 "중간 결과"라고 한다.
 여기서 우리는 Original_gene을 genetic biomarker로 생각하고 결과를 분석하려 한다.
 
 ### 3.6 결과해석
@@ -295,9 +296,10 @@ print(count1)
 Output file을 통해, 다음의 질병이 연관이 있다는 것을 알 수 있었다.
 
 1. 폐섬유증(Idiopathic pulmonary fibrosis, IPF), 만성폐쇄성폐질환(Chronic Obstructive Pulmonary Disease, COPD), 낭포성 섬유증(Cystic fibrosis, CF)
-2. 백질뇌증(Progressive multifocal leukoencephalopathy, PML), 다발성 경화증(Multiple sceloris)
+2. 백질뇌증(Progressive multifocal leukoencephalopathy, PML), 다발성 경화증(Multiple sceloris, MS)
 
-마찬가지로 이 질병들도 MarkerDB에서 biomarker가 존재하는지 알아보았고, 그 결과는 다음과 같았다. 
+이 질환들을 '가족 질환'이라고 하자.
+마찬가지로 가족 질환이 MarkerDB에서 biomarker가 존재하는지 알아보았고, 그 결과는 다음과 같았다. 
 
 1. 다발성 경화증 (Multiple sclerosis, MS) : 3개 (IL2RA, TNFRSF1A, IL7R)
 2. 만성폐쇄성폐질환 (Chronic Obstructive Pulmonary Disease, COPD): 0개
@@ -310,7 +312,7 @@ Output file을 통해, 다음의 질병이 연관이 있다는 것을 알 수 �
 3. IL7R: Multiple sclerosis
 4. CFTR: Cystic fibrosis, Bronchiectasis, Asthma
 
-데이터프레임을 바탕으로 유사한 질병끼리 모아 Venn Diagram으로 표현하였다.
+중간 결과를 바탕으로 핵심질환마다 가족질환들을 모아 Venn Diagram으로 표현하였다.
 
 ![Figure_1](https://user-images.githubusercontent.com/88135502/128814868-dca4240d-275a-4dca-bbc8-5427765202f2.png)
 
