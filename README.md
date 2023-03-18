@@ -2,18 +2,30 @@
 
 # 주제: PubMed을 이용한 환경성 질환의 biomarker 탐색
 본 과제에서 NCBI 산하의 데이터베이스인 PubMed의 논문을 이용하여 환경성 질환에 대한 biomarker가 무엇이 있는지 알아보았다.
+
 ## 목차
 [1. 목적](https://github.com/Deserav/Environmental-Disease/blob/main/Biomarkers%20of%20Environmental%20Disease.md#1-%EB%AA%A9%EC%A0%81)
+
 [2. 과정에 대한 Flowchart ](https://github.com/Deserav/Environmental-Disease/blob/main/Biomarkers%20of%20Environmental%20Disease.md#2-%EA%B3%BC%EC%A0%95%EC%97%90-%EB%8C%80%ED%95%9C-flowchart)
+
 [3. Progress](https://github.com/Deserav/Environmental-Disease/blob/main/Biomarkers%20of%20Environmental%20Disease.md#3-progress)
+
 [3.1 ICD의 질병을 분류](https://github.com/Deserav/Environmental-Disease/blob/main/Biomarkers%20of%20Environmental%20Disease.md#31-icd%EC%9D%98-%EC%A7%88%EB%B3%91%EC%9D%84-%EB%B6%84%EB%A5%98)
-[3.2 PubMed에서 질병별 Title, Abstract, DOI 추출](https://github.com/Deserav/Environmental-Disease/blob/main/Biomarkers%20of%20Environmental%20Disease.md#32-pubmed%EC%97%90%EC%84%9C-%EC%A7%88%EB%B3%91%EB%B3%84-title-abstract-doi-%EC%B6%94%EC%B6%9C)
+
+[3.2 PubMed에서 질병별 Title, Abstract, DOI 추출](https://github.com/Deserav/Environmental-Disease/blob/main/Biomarkers%20of%20Environmental%20Disease.md#32-pubmed%EC%97%90%EC%84%9C-%EC%A7%88%EB%B3%91%EB%B3%84-title-abstract-doi-%EC%B6%94%EC%B6%9C
+
 [3.3 NCBI에 있는 human gene database로부터 총 gene의 개수 파악](https://github.com/Deserav/Environmental-Disease/blob/main/Biomarkers%20of%20Environmental%20Disease.md#33-ncbi%EC%97%90-%EC%9E%88%EB%8A%94-human-gene-database%EB%A1%9C%EB%B6%80%ED%84%B0-%EC%B4%9D-gene%EC%9D%98-%EA%B0%9C%EC%88%98-%ED%8C%8C%EC%95%85) 
+
 [3.4 Gene의 symbol과 alias를 PubMed 논문에서 찾기](https://github.com/Deserav/Environmental-Disease/blob/main/Biomarkers%20of%20Environmental%20Disease.md#34-gene%EC%9D%98-symbol%EA%B3%BC-alias%EB%A5%BC-pubmed-%EB%85%BC%EB%AC%B8%EC%97%90%EC%84%9C-%EC%B0%BE%EA%B8%B0)
+
 [3.5 Gene과 Disease를 데이터프레임으로 작성](https://github.com/Deserav/Environmental-Disease/blob/main/Biomarkers%20of%20Environmental%20Disease.md#35-gene%EA%B3%BC-disease%EB%A5%BC-%EB%8D%B0%EC%9D%B4%ED%84%B0%ED%94%84%EB%A0%88%EC%9E%84%EC%9C%BC%EB%A1%9C-%EC%9E%91%EC%84%B1)
+
 [3.6 결과해석](https://github.com/Deserav/Environmental-Disease/blob/main/Biomarkers%20of%20Environmental%20Disease.md#36-%EA%B2%B0%EA%B3%BC%ED%95%B4%EC%84%9D)
+
 [4. 주요 질환군의 결과 분석](https://github.com/Deserav/Environmental-Disease/blob/main/Biomarkers%20of%20Environmental%20Disease.md#4-%EC%A3%BC%EC%9A%94-%EC%A7%88%ED%99%98%EA%B5%B0%EC%9D%98-%EA%B2%B0%EA%B3%BC-%EB%B6%84%EC%84%9D)
+
 [5. 문제점](https://github.com/Deserav/Environmental-Disease/blob/main/Biomarkers%20of%20Environmental%20Disease.md#5-%EB%AC%B8%EC%A0%9C%EC%A0%90)
+
 ## 1. 목적
 본 연구의 목적은 환경성 질환군의 genetic biomarker를 찾고, 데이터베이스를 구축하는 것이다.
 환경성 질환은 환경보건법 제2조 제 2호[1]에 따라 환경유해인자와 상관성이 있다고 인정되는 질환 중 감염질환이 아닌 것을 이야기한다. 환경성 질환은 총 6가지의 질환군으로 분류된다. 그 중에서 세 가지 질환군인 알레르기 질환군, 신경계 질환군, 호흡계 질환군을 대상으로 연구를 진행하였다.
@@ -22,9 +34,12 @@
 - 신경계 질환군: 자폐증(Autism Spectrum Disorder), 백질뇌증(Progressive Multifocal Leukoencephalopathy, PML), ADHD(Attention Deficit Hyperactivity Disorder)
 탐색할 질환 목록에 포함되도록 했다.
 선행된 연구 중에서 genetic biomarker과 disease가 키워드로 포함된 논문을 PubMed에서 찾아, 등장하는 gene과 disease 이름을 파악하여 상관성이 높은 것을 찾는 것이 목표이다.
+
 ## 2. 과정에 대한 Flowchart
 ![프레젠테이션1 (1)](https://user-images.githubusercontent.com/88135502/127962840-e6dca16f-cb88-4828-ac83-bca73fa456bb.jpg)
+
 ## 3. Progress
+
 ### 3.1 ICD의 질병을 분류
 [ICD(International Statistical Classification of Diseases and Related Health Problems)](https://www.who.int/standards/classifications/classification-of-diseases) 는 세계보건기구(WHO)에서 만든, 질병과 증후군에 대한 국제 표준이다. 본 연구에서 사용한 ICD-11는 ICD의 11번째 개정안으로, 2019년 5월에 채택되었고, 2022년 1월 1일부터 효력을 가진다. 
 [ICD-11 질병분류](https://icd.who.int/browse11/l-m/en)
@@ -40,6 +55,7 @@ ICD-11에서 사용한 전체 질병의 목록은 다음과 같다.
 [ADHD_8-5-2021.txt](https://github.com/Deserav/Environmental-Disease/files/6936437/ADHD_8-5-2021.txt)
 이 목록은 위 ICD-11 사이트에서 텍스트를 복사한 것이다. 여기에 동일한 질병이 다른 분류에 속해있는 경우도 있어서, 그런 중복을 제거하고 과정을 진행하였다. 
 이렇게 ICD-11에 존재하는 질환군 내의 모든 질병을 파악한다. 그리고 각각의 질병마다 biomarker가 있는지 알아보기 위해, PubMed에서 **"질병명[Title/Abstract]" AND "biomarker[Title/Abstract]"** 를 키워드로 검색했을 때 등장하는 논문의 수를 알아보았다. 그 결과는 다음과 같다.
+
 |         |알레르기 질환군| 신경계 질환군| 호흡계 질환군| ADHD | 계 |
 |---------|-------------|------------|-----------|------------|----|
 |총 질환 개수|221|2,181|667| 6 | 3075 |
@@ -47,31 +63,47 @@ ICD-11에서 사용한 전체 질병의 목록은 다음과 같다.
 |논문이 존재하는 질환의 개수|**30**|**256**|**93**|**1**|**380**|
 |논문의 수|2,226|9,589|6,810|205|18,830|
 |Gene이름이 등장하는 논문의 수*|1,537|7,694|5,103|125|14,459|
+
 **총 18,830편의 논문**
+
 \* 섹션 3.4에 결과 첨부 및 설명
 위 결과에서 논문이 존재하는 질환만을 따로 모아 txt 파일로 정리하였고, 아래에 첨부하였다.
 [allrDB_shredded_list_refined.txt](https://github.com/Deserav/Environmental-Disease/files/6943220/allrDB_shredded_list_refined.txt) **총 30개의 질환**
+
 [nervDB_shredded_list_refined.txt](https://github.com/Deserav/Environmental-Disease/files/6943221/nervDB_shredded_list_refined.txt) **총 256개의 질환**
+
 [respDB_shredded_list_refined.txt](https://github.com/Deserav/Environmental-Disease/files/6943222/respDB_shredded_list_refined.txt) **총 93개의 질환**
+
 [ADHD_shredded_list_refined.txt](https://github.com/Deserav/Environmental-Disease/files/6943385/ADHD_shredded_list_refined.txt) **총 1개의 질환**
+
 이후에 편의를 위해 '논문이 존재하는 질환'을 간략히 파일명과 같이 shredded list로 부르기로 한다.
 반면, 논문이 존재하는 질환을 대상으로, 각 질환이 몇 개의 논문을 가지고 있는지 다음과 같이 정리하였다.
+
 [allrDB_number_of_papers.txt](https://github.com/Deserav/Environmental-Disease/files/6943230/allrDB_number_of_papers.txt)
+
 [nervDB_number_of_papers.txt](https://github.com/Deserav/Environmental-Disease/files/6943231/nervDB_number_of_papers.txt)
+
 [respDB_number_of_papers.txt](https://github.com/Deserav/Environmental-Disease/files/6943232/respDB_number_of_papers.txt)
+
 [ADHD_number_of_papers.txt](https://github.com/Deserav/Environmental-Disease/files/6943277/ADHD_number_of_papers.txt)
+
 이로써 ICD-11에 분류되어 있는 알레르기 질환, 신경계 질환, 호흡계 질환 중에 PubMed 데이터베이스에 존재하는 질병의 목록, 논문의 수를 확보하게 되었다.
+
 ### 3.2 PubMed에서 질병별 Title, Abstract, DOI 추출
 Python의 Biopython 모듈로부터 Entrez와 Medline 모듈을 사용하여, 검색 키워드로부터 등장하는 논문들의 Title, Abstract, DOI를 전부 하나의 txt 파일로 정리하였다. 3.1 단계에 첨부한 각각의 txt 파일에 등장한 질병들을 모듈의 input으로 하여 다음의 과정을 진행하였다.
 - ICD-11에서 찾은 개별적인 질명에 biomarker라는 키워드와 결합하여 **"질병명"[Title/Abstract] AND "biomarker"[Title/Abstract]** 로 검색하였다. 질병명을 정확히 찾기 위해 '질병명'과 'biomarker'에 큰따옴표 처리를 한다.
 - 각 질병마다 검색 결과로 나타나는 논문들의 Title, Abstract, DOI를 txt 파일로 정리하였다. 
  
 이런 식으로 Python을 이용하여 알레르기 질환 30개, 신경계 질환 256개, 호흡계 질환 93개, ADHD 질환 1에 txt 파일을 만들어, 논문의 Title, Abstract, DOI를 저장하였다.
+
 ### 3.3 NCBI에 있는 human gene database로부터 총 gene의 개수 파악
 온라인 [오픈 소스 biomarker 데이터베이스](https://markerdb.ca/) 가 있기는 하지만, 등장하는 질병의 수와 gene의 수가 매우 한정적이었다. 그래서 human gene을 전수조사 하는 과정을 진행하였다. 
 NCBI에서 제공한 raw data에 대한 파일은 다음과 같다.
+
 [gene_result.txt](https://github.com/Deserav/Environmental-Disease/files/6920740/gene_result.txt)
+
 이 데이터를 보면 각 gene 마다 symbol과 alias가 있다. 각 symbol과 alias를 하나의 문자열로 생각했을 때, 이 문자열이 3.2 단계에서 찾은 논문에 과연 존재하는지 알아보기로 했다. 그러기 위해서는 이 데이터에서 유의미한 문자열만 골라내야 했다. 다음과 같은 과정을 통해 필요한 문자열만 골라냈다.
+
 1. NCBI에 등장하는 63,750개의 (pseudogene, tRNA gene 등을 포함) gene의 symbol과 alias를 전부 추출하였다.
 2. Gene과 aliase에 중복인 것을 제거했을 때, 127,994개의 서로 다른 문자열이 생성되었다.
 3. 한 글자 문자열 8개, nan을 제거하면 127,994 - 9 = 127,985개의 문자열이 남는다.
@@ -79,7 +111,9 @@ NCBI에서 제공한 raw data에 대한 파일은 다음과 같다.
  - II, IN, KO, ME, TO, UP, AM, DO, IV, CO, IF, GO, OK, ID, OF, AN, NA, AS: 18 종류
  - SOS, BUG, CAM, ATP, MAX, OUT, FAN, VIP, CAR, LED, APE, RED, NOT, DUO, SHE, ICE, GAS, ENG, FAD, GAP, SET, AIM, SIT, PEN, WAS, PIN, CAN, ZIP, AIR, ARM, AID, GET, TIP, FOG, APP, HOT, BAR, SON, SEA, NOV, HUB, ACT, FOR, CAR, OUT, NOT, AIM, CAN, SEA, PDF, VIA, bet, FAN, HOT, PEN, LAB, ECM, not: 49 종류
 최종적으로 127,985 - ( 18 + 49 ) = 127,918의 문자열을 가지고 다음 단계를 진행하였다. 이때 사용한 gene과 alias의 목록은 다음과 같이 첨부했다.
+
 [final_genelist.txt](https://github.com/Deserav/Environmental-Disease/files/6943375/final_genelist.txt)
+
 ### 3.4 Gene의 symbol과 alias를 PubMed 논문에서 찾기
 전 단계에서 선정한 127,918개의 문자열과 18,830 논문의 Abstract와 비교하였다. 이렇게 문자열 비교를 통해 논문마다 등장하는 gene의 종류, 빈도를 계산하였다. 그리고 최종적으로 질환 하나에 등장하는 gene의 종류, 개수, 빈도를 계산하였다. 이 결과를 zip로 첨부하였다. 이 파일의 구성은 다음과 같다.
 - Shredded list 에 등장하는 질환에 대해 개별적인 파일을 만들고, 파일명을 "질병명 + output"으로 칭한다.
@@ -93,22 +127,38 @@ NCBI에서 제공한 raw data에 대한 파일은 다음과 같다.
   - 지금까지 발견한 gene의 종류
   - 지금까지 발견한 gene의 빈도
 데이터의 양이 많기 때문에, 아래는 중요한 결과를 요약한 것이다. 다음은 질환별 논문에 등장하는 gene과 alias의 종류와 빈도에 대한 결과이다.
+
 [allrDB_count.txt](https://github.com/Deserav/Environmental-Disease/files/6946517/allrDB_count.txt)
+
 [nervDB_count.txt](https://github.com/Deserav/Environmental-Disease/files/6946521/nervDB_count.txt)
+
 [respDB_count.txt](https://github.com/Deserav/Environmental-Disease/files/6946524/respDB_count.txt)
+
 [ADHD_count.txt](https://github.com/Deserav/Environmental-Disease/files/6928796/ADHD_count.txt)
+
 아래는 질환군별로 등장하는 gene과 alias가 표시되어 있다.
+
 [allrDB_gene_set.txt](https://github.com/Deserav/Environmental-Disease/files/6946539/allrDB_gene_set.txt)
+
 [nervDB_gene_set.txt](https://github.com/Deserav/Environmental-Disease/files/6946536/nervDB_gene_set.txt)
+
 [respDB_gene_set.txt](https://github.com/Deserav/Environmental-Disease/files/6946534/respDB_gene_set.txt)
+
 [ADHD_gene_set.txt](https://github.com/Deserav/Environmental-Disease/files/6928808/ADHD_gene_set.txt)
+
 그 결과, 질환군별로 나타나는 gene + alias 의 개수는 알레르기 질환군 869개, 신경계 질환군 2,223개, 호흡계 질환군 1,831 개, ADHD가 120개였다.
 마지막으로, 질환군별로, 각 질환마다 gene 이름이 존재하는 논문의 수에 대한 데이터이다. 마지막 줄에는 질환군에서 gene 이름에 포함된 논문의 수가 쓰여 있다.
+
 [allrDB_number_of_papers_thathave_gene.txt](https://github.com/Deserav/Environmental-Disease/files/6948694/allrDB_number_of_papers_thathave_gene.txt)
+
 [nervDB_number_of_papers_thathave_gene.txt](https://github.com/Deserav/Environmental-Disease/files/6948695/nervDB_number_of_papers_thathave_gene.txt)
+
 [respDB_number_of_papers_thathave_gene.txt](https://github.com/Deserav/Environmental-Disease/files/6948696/respDB_number_of_papers_thathave_gene.txt)
+
 [ADHD_number_of_papers_thathave_gene.txt](https://github.com/Deserav/Environmental-Disease/files/6948697/ADHD_number_of_papers_thathave_gene.txt)
+
 챕터 3.1 표에 표시한 것처럼 gene이 등장하는 논문의 수는 알레르기가 1,537개, 신경계가 7,694개, 호흡계가 5,103개, ADHD가 1,25개이다.
+
 ### 3.5 Gene과 Disease를 데이터프레임으로 작성
 챕터 3.4에 있는 count 파일을 바탕으로, 질병과 gene에 대한 데이터프레임으로 정리하였다. Column name의 뜻은 다음과 같다
 - Disease: 질환 이름
@@ -123,11 +173,16 @@ NCBI에서 제공한 raw data에 대한 파일은 다음과 같다.
 
 ### 3.6 결과해석
 질병과 biomarker의 상관성은, 기준을 질병으로 볼때와 biomarker로 볼때가 다르기 때문에 따로 결과를 명시하였다.
+
 #### 3.6.1 Disease - Biomarker Link
 각 질환별로 biomarker의 종류는 다음과 같다
+
 [types_of_biomarker_per_disease.txt](https://github.com/Deserav/Environmental-Disease/files/6949169/types_of_biomarker_per_disease.txt)
+
 각 질환의 biomarker의 수는 다음과 같다.
+
 [number_of_biomarker_per_disease.txt](https://github.com/Deserav/Environmental-Disease/files/6950667/number_of_biomarker_per_disease.txt)
+
 가장 아래줄에 지금까지 나온 biomarker의 수가 나타있는데, 총 **16,821개** 이다. 이 수치는 중복된 질병을 제외한 수치이다.
 질환군별로 정리했을 대는  다음과 같다.
 1. 알레르기 질환군: **총 1933개**
